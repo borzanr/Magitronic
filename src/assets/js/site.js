@@ -2,6 +2,7 @@
 (function () {
   'use strict';
 
+  var BASE = document.body.getAttribute('data-base') || '';  // '/v2' na segunda versão
   var dl = (window.dataLayer = window.dataLayer || []);
   function track(event, data) {
     var payload = { event: event };
@@ -156,7 +157,7 @@
         sendEmail(form, collected, true).catch(function () {});
         try { sessionStorage.setItem('mg-wa', waUrl); } catch (err) {}
         if (!win) { location.href = waUrl; return; }
-        location.href = '/obrigado';
+        location.href = BASE + '/obrigado';
         return;
       }
 
@@ -166,7 +167,7 @@
       sendEmail(form, collected, false).then(function (ok) {
         if (!ok) throw new Error('falha');
         try { sessionStorage.setItem('mg-wa', waUrl); } catch (err) {}
-        location.href = '/obrigado';
+        location.href = BASE + '/obrigado';
       }).catch(function () {
         btn.disabled = false;
         status.className = 'form-status error';

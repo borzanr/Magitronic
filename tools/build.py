@@ -53,9 +53,11 @@ def parse_front_matter(text: str) -> tuple[dict, str]:
 
 
 class Site:
-    def __init__(self, env: str):
+    def __init__(self, env: str, theme: str = "a", prefix: str = ""):
         self.env = env
         self.staging = env == "staging"
+        self.theme = theme          # "a" = versão original, "b" = versão de mais impacto visual
+        self.prefix = prefix        # ex.: "/v2" — publica a variante numa subpasta
         self.d = json.loads(read(SRC / "site.json"))
         self.base = self.d["production_url"]
         self.images = json.loads(read(SRC / "assets" / "img" / "manifest.json"))
@@ -350,7 +352,7 @@ class Site:
             schemas.append(self.breadcrumb_schema([("Início", "/")] + trail))
         ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>'
                      for s in schemas)
-        robots = "noindex, nofollow" if (self.staging or page.get("noindex")) else "index, follow"
+        robots = "noindex, nofollow" if (self.staging or page.get("noindex") or self.prefix) else "index, follow"
         canonical = self.url(path) if path != "/404" else ""
         og_image = self.url("/assets/img/og-magitronic.jpg")
         preload = ""
@@ -380,7 +382,7 @@ class Site:
                 for i, (n, u) in enumerate(trail))
             crumbs = f'<nav class="breadcrumb wrap" aria-label="Você está em"><ol>{links}</ol></nav>'
         tpl = self.templates
-        demo = tpl["demo-bar"] if self.staging else ""
+        demo = self.demo_bar() if self.staging else ""
         gtm_head = gtm_body = ""
         if self.d["gtm_id"]:
             gid = self.d["gtm_id"]
@@ -395,8 +397,32 @@ class Site:
                .replace("[[breadcrumb]]", crumbs)
                .replace("[[content]]", page["body"])
                .replace("[[footer]]", tpl["footer"])
+               .replace("[[body_attrs]]", self.body_attrs())
+               .replace("[[theme_css]]", self.theme_css())
                .replace("[[v]]", self.asset_version))
-        return self.expand(out)
+        out = self.expand(out)
+        if self.prefix:
+            # links e ações internos passam a apontar para a subpasta (os assets continuam na raiz)
+            out = re.sub(r'(href|src|action)="/(?!/|assets/)', lambda m: f'{m.group(1)}="{self.prefix}/', out)
+        return out
+
+    def body_attrs(self) -> str:
+        attrs = f' data-base="{self.prefix}"' if self.prefix else ""
+        return f' class="theme-b"{attrs}' if self.theme == "b" else attrs
+
+    def theme_css(self) -> str:
+        if self.theme != "b":
+            return ""
+        return f'<link rel="stylesheet" href="/assets/css/theme-b.css?v={self.asset_version}">'
+
+    def demo_bar(self) -> str:
+        """Barra de protótipo com o seletor entre as duas versões visuais."""
+        here, other = ("B", "A") if self.theme == "b" else ("A", "B")
+        links = ('<a href="/" class="ver-a">Versão A</a><a href="/v2/" class="ver-b">Versão B</a>')
+        return (self.templates["demo-bar"]
+                .replace("[[switch]]", links)
+                .replace("[[atual]]", here)
+                .replace("[[outra]]", other))
 
     def header(self, path: str) -> str:
         def links(kind: str) -> str:
@@ -581,18 +607,20 @@ def sitemap_links(self: Site) -> str:
 Site.sitemap_links = sitemap_links
 
 
-def out_file(path: str) -> Path:
+def out_file(path: str, out_dir: Path = OUT) -> Path:
     if path == "/":
-        return OUT / "index.html"
+        return out_dir / "index.html"
     if path.endswith("/"):
-        return OUT / path.strip("/") / "index.html"
-    return OUT / (path.strip("/") + ".html")
+        return out_dir / path.strip("/") / "index.html"
+    return out_dir / (path.strip("/") + ".html")
 
 
-def build(env: str) -> None:
+def build(env: str, theme: str = "a", prefix: str = "", out_dir: Path | None = None,
+          clean: bool = True) -> Site:
     import sys
     sys.stdout.reconfigure(encoding="utf-8")
-    site = Site(env)
+    out_dir = out_dir or OUT
+    site = Site(env, theme=theme, prefix=prefix)
 
     # páginas de serviço e peças
     for s in site.services:
@@ -652,11 +680,16 @@ def build(env: str) -> None:
                  schema=[article], og_type="article", preload=post["image"], priority="0.5")
 
     # saída
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    shutil.copytree(SRC / "assets", OUT / "assets", ignore=shutil.ignore_patterns("manifest.json"))
+    if clean and out_dir.exists():
+        shutil.rmtree(out_dir)
+    if clean:
+        shutil.copytree(SRC / "assets", out_dir / "assets", ignore=shutil.ignore_patterns("manifest.json"))
     for page in site.pages:
-        write(out_file(page["url"]), site.render(page))
+        write(out_file(page["url"], out_dir), site.render(page))
+
+    if prefix:
+        print(f"{len(site.pages)} páginas geradas em {out_dir} (versão {theme.upper()})")
+        return site
 
     urls = [p for p in site.pages if not p.get("noindex") and p["url"] != "/404"]
     today = date.today().isoformat()
@@ -672,9 +705,16 @@ def build(env: str) -> None:
         write(OUT / "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {site.url('/sitemap.xml')}\n")
     write(OUT / ".nojekyll", "")
     print(f"{len(site.pages)} páginas geradas em {OUT} (ambiente: {env})")
+    return site
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--env", choices=["staging", "production"], default="staging")
-    build(ap.parse_args().env)
+    ap.add_argument("--theme", choices=["a", "b"], default="a", help="versão visual publicada na raiz")
+    ap.add_argument("--no-variant", action="store_true", help="não gerar a segunda versão em /v2")
+    args = ap.parse_args()
+    build(args.env, theme=args.theme)
+    if args.env == "staging" and not args.no_variant:
+        other = "b" if args.theme == "a" else "a"
+        build(args.env, theme=other, prefix="/v2", out_dir=OUT / "v2", clean=False)

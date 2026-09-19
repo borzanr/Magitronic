@@ -100,6 +100,14 @@ p { margin: 0; }
 /* ---------- barra de protótipo ---------- */
 .demo-bar { background: #fff4d6; color: #5c4300; font-size: .85rem; padding-block: 8px; border-bottom: 1px solid #f0dca0; }
 .demo-bar a { color: inherit; font-weight: 600; }
+.demo-row { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; }
+.demo-switch { display: flex; align-items: center; gap: 8px; }
+.demo-switch a {
+  border: 1px solid #d9c07a; border-radius: 999px; padding: 3px 12px; text-decoration: none;
+  background: #fffaee; white-space: nowrap;
+}
+.demo-switch a:hover { background: #fff; }
+body:not(.theme-b) .demo-switch .ver-a, body.theme-b .demo-switch .ver-b { background: #5c4300; color: #fff4d6; border-color: #5c4300; }
 
 /* ---------- cabeçalho ---------- */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }

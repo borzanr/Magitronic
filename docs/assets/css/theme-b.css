@@ -1,0 +1,193 @@
+/* Magitronic — versão B
+   Carregada depois de site.css. Mesma estrutura, direção visual mais forte:
+   azul-noite, acento âmbar, cantos retos e tipografia maior. */
+
+body.theme-b {
+  --blue: #1e4fe0;
+  --blue-700: #1740b8;
+  --blue-50: #eef3ff;
+  --blue-100: #d4e0ff;
+  --navy: #060d1f;
+  --navy-800: #101b38;
+  --amber: #ffb020;
+  --amber-700: #e09400;
+  --ink: #101828;
+  --ink-2: #47536b;
+  --ink-3: #68748c;
+  --line: #dde3ee;
+  --ground: #f2f5fb;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --shadow: 0 1px 2px rgb(6 13 31 / .08), 0 10px 30px rgb(6 13 31 / .08);
+}
+
+/* ---------- tipografia ---------- */
+body.theme-b h1, body.theme-b h2, body.theme-b h3, body.theme-b .h3, body.theme-b .h4 {
+  font-stretch: 122%;
+  letter-spacing: -.02em;
+}
+body.theme-b h1 { font-size: clamp(2.3rem, 6vw, 4rem); font-weight: 800; line-height: 1.04; }
+body.theme-b h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 800; }
+body.theme-b .eyebrow {
+  display: inline-flex; align-items: center; gap: 10px; color: var(--amber-700);
+  font-weight: 700; letter-spacing: .14em;
+}
+body.theme-b .eyebrow::before { content: ""; width: 28px; height: 3px; background: var(--amber); }
+
+/* ---------- botões mais firmes ---------- */
+body.theme-b .btn { border-radius: var(--radius); font-weight: 720; min-height: 54px; }
+body.theme-b .btn-primary { background: var(--amber); color: #23180a; border-color: var(--amber); }
+body.theme-b .btn-primary:hover { background: var(--amber-700); border-color: var(--amber-700); color: #23180a; }
+body.theme-b .btn-ghost { border-color: #c6d2ea; }
+/* sobre os topos escuros o contorno precisa ser branco, não azul */
+body.theme-b .hero .btn-ghost, body.theme-b .page-hero .btn-ghost, body.theme-b .page-head .btn-ghost {
+  color: #fff; border-color: rgb(255 255 255 / .55);
+}
+body.theme-b .hero .btn-ghost:hover, body.theme-b .page-hero .btn-ghost:hover, body.theme-b .page-head .btn-ghost:hover {
+  border-color: var(--amber); color: var(--amber);
+}
+body.theme-b .btn-sm { min-height: 42px; }
+
+/* ---------- cabeçalho escuro ---------- */
+body.theme-b .site-header { background: var(--navy); border-bottom: 1px solid #1b2947; }
+body.theme-b .logo img { filter: brightness(0) invert(1); }
+body.theme-b .nav-list > li > a, body.theme-b .sub-toggle, body.theme-b .nav-phone { color: #e8edf9; }
+body.theme-b .menu-toggle { background: transparent; color: #fff; border-color: #2b3a5e; }
+body.theme-b .nav.open { background: var(--navy); border-bottom-color: #1b2947; }
+body.theme-b .nav-list > li > a, body.theme-b .sub-toggle { border-bottom-color: #1b2947; }
+@media (min-width: 1100px) {
+  body.theme-b .nav-list > li > a:hover, body.theme-b .sub-toggle:hover { background: #16233f; color: #fff; }
+  body.theme-b .sub, body.theme-b .sub.open { background: #0d1729; border-color: #22314f; }
+}
+body.theme-b .sub a { color: #c9d4ea; }
+body.theme-b .sub a:hover { color: var(--amber); }
+body.theme-b .sub-title { color: var(--amber); }
+body.theme-b .sub-all a { color: #fff; }
+
+/* ---------- hero com foto ---------- */
+body.theme-b .hero {
+  background:
+    linear-gradient(105deg, rgb(6 13 31 / .96) 0%, rgb(6 13 31 / .92) 48%, rgb(6 13 31 / .70) 100%),
+    url("/assets/img/tecnico-solda.webp") center right / cover no-repeat,
+    var(--navy);
+  padding-block: clamp(40px, 6vw, 88px) clamp(40px, 6vw, 88px);
+  border-bottom: 4px solid var(--amber);
+}
+body.theme-b .hero h1, body.theme-b .hero h2 { color: #fff; }
+body.theme-b .hero h1 span { color: var(--amber); }
+body.theme-b .hero .lead { color: #c3cfe8; font-size: 1.2rem; }
+body.theme-b .hero .eyebrow { color: var(--amber); }
+body.theme-b .hero-card { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
+body.theme-b .hero-card h2 { color: var(--navy); }  /* o cartão é branco: título volta ao azul-noite */
+
+/* números do hero em faixa escura */
+body.theme-b .proof { background: #1b2947; border-color: #1b2947; }
+body.theme-b .proof div { background: rgb(255 255 255 / .04); }
+body.theme-b .proof dd { color: var(--amber); font-size: 1.5rem; font-stretch: 122%; }
+body.theme-b .proof dt { color: #9fb0d0; }
+
+/* ---------- títulos de seção ---------- */
+body.theme-b .section-head h2, body.theme-b .section > h2 { position: relative; }
+body.theme-b .page-head h1 { margin-top: 4px; }
+
+/* ---------- cartões ---------- */
+body.theme-b .card-link, body.theme-b .symptom-links a {
+  border-left: 3px solid transparent;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+body.theme-b .card-link:hover, body.theme-b .symptom-links a:hover {
+  border-color: var(--line); border-left-color: var(--amber); box-shadow: var(--shadow); transform: translateY(-2px);
+}
+body.theme-b .symptom-links em { color: var(--blue); }
+body.theme-b .symptoms li { border-top: 3px solid var(--blue); }
+
+/* ---------- passos em faixa escura ---------- */
+body.theme-b .section:has(> .steps) {
+  background: var(--navy);
+  color: #c3cfe8;
+  padding-block: clamp(48px, 7vw, 88px);
+  margin-top: clamp(48px, 7vw, 88px);
+  max-width: none;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-inline: max(var(--gutter), calc(50vw - var(--wrap) / 2 + var(--gutter)));
+}
+body.theme-b .section:has(> .steps) h2 { color: #fff; }
+body.theme-b .section:has(> .steps) .section-head p { color: #9fb0d0; }
+body.theme-b .steps li { background: rgb(255 255 255 / .05); border-color: #22314f; }
+body.theme-b .section:has(> .steps) .steps h3 { color: #fff; }
+body.theme-b .section:has(> .steps) .steps p { color: #9fb0d0; }
+body.theme-b .steps li::before { background: var(--amber); color: #23180a; border-radius: var(--radius); }
+
+/* ---------- marcas ---------- */
+body.theme-b .chips li { border-color: #c9d4ea; background: #fff; }
+
+/* ---------- avaliações ---------- */
+body.theme-b .review { border-top: 3px solid var(--amber); }
+body.theme-b .stars { color: var(--amber-700); }
+
+/* ---------- páginas internas: topo escuro ---------- */
+body.theme-b .page-hero {
+  background: linear-gradient(180deg, var(--navy) 0%, #0b1631 100%);
+  padding-block: clamp(28px, 4vw, 52px) clamp(32px, 5vw, 60px);
+  border-bottom: 4px solid var(--amber);
+}
+body.theme-b .page-hero h1 { color: #fff; }
+body.theme-b .page-hero .lead { color: #c3cfe8; }
+body.theme-b .page-hero .ticks li { color: #e8edf9; }
+body.theme-b .page-hero .ticks li::before { border-color: var(--amber); }
+body.theme-b .page-hero-img { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .4); }
+body.theme-b .page-hero + .breadcrumb { color: #fff; }
+body.theme-b .breadcrumb ol { color: var(--ink-3); }
+body.theme-b .page-head { background: linear-gradient(180deg, var(--navy) 0%, #0b1631 100%); color: #c3cfe8; padding-block: clamp(28px, 4vw, 52px) clamp(32px, 5vw, 56px); width: 100vw; margin-left: calc(50% - 50vw); padding-inline: max(var(--gutter), calc(50vw - var(--wrap) / 2 + var(--gutter))); border-bottom: 4px solid var(--amber); }
+body.theme-b .page-head h1 { color: #fff; }
+body.theme-b .page-head .lead { color: #c3cfe8; }
+body.theme-b .page-head .eyebrow { color: var(--amber); }
+
+/* breadcrumb sobre fundo claro continua igual; no topo escuro some a borda */
+body.theme-b .breadcrumb { background: var(--ground); }
+
+/* ---------- caixa lateral de resumo ---------- */
+body.theme-b .facts-box { background: var(--navy); color: #c3cfe8; border-color: var(--navy); }
+body.theme-b .facts-box .h4 { color: #fff; }
+body.theme-b .facts div { border-bottom-color: #22314f; }
+body.theme-b .facts dt { color: var(--amber); }
+body.theme-b .facts dd { color: #fff; }
+body.theme-b .facts-note { color: #8fa0c0; }
+
+/* ---------- faixa de formulário ---------- */
+body.theme-b .band {
+  background:
+    radial-gradient(1200px 400px at 15% 0%, rgb(30 79 224 / .35), transparent 60%),
+    linear-gradient(180deg, var(--navy) 0%, #0b1631 100%);
+  border-top: 4px solid var(--amber);
+}
+body.theme-b .band a { color: var(--amber); }
+
+/* ---------- CTA final ---------- */
+body.theme-b .cta-box {
+  background:
+    radial-gradient(800px 300px at 90% 10%, rgb(255 176 32 / .28), transparent 60%),
+    linear-gradient(120deg, var(--blue) 0%, var(--navy) 85%);
+  border: 1px solid #22314f;
+}
+body.theme-b .cta-box .btn-ghost { border-color: rgb(255 255 255 / .5); }
+
+/* ---------- FAQ ---------- */
+body.theme-b .faq summary { color: var(--navy); }
+body.theme-b .faq summary::after { color: var(--amber-700); }
+body.theme-b .faq details[open] { border-color: var(--amber); }
+
+/* ---------- rodapé ---------- */
+body.theme-b .site-footer { background: #04091a; border-top: 4px solid var(--amber); }
+body.theme-b .footer-title { color: var(--amber); }
+body.theme-b .footer-bottom { border-top-color: #141f3a; }
+
+/* ---------- barra de ação no celular ---------- */
+body.theme-b .action-bar { border-top: 2px solid var(--amber); }
+body.theme-b .action-bar a { color: var(--navy); }
+body.theme-b .action-bar .ab-wa { color: #fff; }
+
+@media (max-width: 959px) {
+  body.theme-b .hero { background-position: 70% center; }
+}
