@@ -64,26 +64,33 @@ body.theme-b .sub a:hover { color: var(--amber); }
 body.theme-b .sub-title { color: var(--amber); }
 body.theme-b .sub-all a { color: #fff; }
 
-/* ---------- hero com foto ---------- */
+/* ---------- topo escuro com a ilustração ---------- */
 body.theme-b .hero {
-  background:
-    linear-gradient(105deg, rgb(6 13 31 / .96) 0%, rgb(6 13 31 / .92) 48%, rgb(6 13 31 / .70) 100%),
-    url("/assets/img/tecnico-solda.webp") center right / cover no-repeat,
-    var(--navy);
-  padding-block: clamp(40px, 6vw, 88px) clamp(40px, 6vw, 88px);
-  border-bottom: 4px solid var(--amber);
+  background: linear-gradient(120deg, #060d1f 0%, #0b1631 55%, #132449 100%);
+  border-bottom: 0;
 }
-body.theme-b .hero h1, body.theme-b .hero h2 { color: #fff; }
+body.theme-b .hero::before {
+  background-image: url("/assets/img/circuito.webp");
+  filter: invert(1);
+  opacity: .10;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+}
+body.theme-b .hero h1 { color: #fff; }
 body.theme-b .hero h1 span { color: var(--amber); }
 body.theme-b .hero .lead { color: #c3cfe8; font-size: 1.2rem; }
 body.theme-b .hero .eyebrow { color: var(--amber); }
+body.theme-b .hero .ticks li { color: #e8edf9; }
+body.theme-b .hero .ticks li::before { border-color: var(--amber); }
+body.theme-b .hero-art img { filter: drop-shadow(0 30px 60px rgb(0 0 0 / .55)); }
+body.theme-b .quote-bar { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
+body.theme-b .quote-bar-title { color: var(--navy); }
 body.theme-b .hero-card { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
-body.theme-b .hero-card h2 { color: var(--navy); }  /* o cartão é branco: título volta ao azul-noite */
+body.theme-b .hero-card h2 { color: var(--navy); }
 
-/* números do hero em faixa escura */
-body.theme-b .proof { background: #1b2947; border-color: #1b2947; }
-body.theme-b .proof div { background: rgb(255 255 255 / .04); }
-body.theme-b .proof dd { color: var(--amber); font-size: 1.5rem; font-stretch: 122%; }
+/* faixa de números */
+body.theme-b .proof-band { background: #0b1631; border-top: 4px solid var(--amber); }
+body.theme-b .proof dd { color: var(--amber); }
 body.theme-b .proof dt { color: #9fb0d0; }
 
 /* ---------- títulos de seção ---------- */

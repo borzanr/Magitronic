@@ -4,29 +4,44 @@ title: Conserto de Notebook em Moema, SP | Magitronic
 description: Conserto de notebook, troca de tela, placa-mãe e recuperação de dados em Moema. Desde 2001, +50 mil notebooks atendidos. Orçamento grátis pelo WhatsApp.
 schema: localbusiness
 priority: 1.0
+preload: notebook-ilustracao
 ---
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
       <p class="eyebrow">Assistência técnica de notebooks · Moema, SP</p>
-      <h1>Conserto de notebook em Moema com <span>diagnóstico grátis</span></h1>
-      <p class="lead">Tela, placa-mãe, teclado, bateria e recuperação de dados para todas as marcas, inclusive MacBook. Você só paga se aprovar o orçamento.</p>
+      <h1>Conserto de notebook com <span>diagnóstico grátis</span></h1>
+      <p class="lead">Tela, placa-mãe, teclado, bateria e recuperação de dados para todas as marcas, inclusive MacBook. Desde 2001 em Moema, São Paulo.</p>
+      <ul class="ticks">
+        <li>Orçamento por escrito antes de qualquer reparo</li>
+        <li>Você só paga se aprovar</li>
+        <li>90 dias de garantia no serviço</li>
+      </ul>
       <div class="actions">
         {{wa_button}}
         <a class="btn btn-ghost" href="/orcamento">Pedir orçamento</a>
       </div>
-      <dl class="proof">
-        <div><dt>consertando notebooks</dt><dd>Desde 2001</dd></div>
-        <div><dt>notebooks atendidos</dt><dd>+50 mil</dd></div>
-        <div><dt>diagnóstico e orçamento</dt><dd>Grátis</dd></div>
-        <div><dt>de garantia no serviço</dt><dd>90 dias</dd></div>
-      </dl>
     </div>
-    <div class="hero-card">
-      <h2>Orçamento rápido</h2>
-      <p>Escolha a marca e o problema. Abrimos o WhatsApp com a mensagem pronta.</p>
-      {{quick_form}}
+    <figure class="hero-art">{{img_hero:notebook-ilustracao|Ilustração de notebook com ícones de diagnóstico, dados e proteção}}</figure>
+  </div>
+
+  <div class="wrap quote-bar">
+    <div class="quote-bar-head">
+      <p class="quote-bar-title">Orçamento rápido</p>
+      <p class="quote-bar-sub">Preencha e abrimos o WhatsApp com a mensagem pronta.</p>
     </div>
+    {{quick_form:inline}}
+  </div>
+</section>
+
+<section class="proof-band">
+  <div class="wrap">
+    <dl class="proof">
+      <div><dt>consertando notebooks</dt><dd>Desde 2001</dd></div>
+      <div><dt>notebooks atendidos</dt><dd>+50 mil</dd></div>
+      <div><dt>diagnóstico e orçamento</dt><dd>Grátis</dd></div>
+      <div><dt>de garantia no serviço</dt><dd>90 dias</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -56,11 +71,10 @@ priority: 1.0
 <section class="wrap section" aria-labelledby="servicos">
   <div class="section-head">
     <h2 id="servicos">Serviços e peças</h2>
+    <p>Conserto, upgrade e peças com instalação, com a mesma garantia de 90 dias.</p>
   </div>
-  <p class="group-title">Consertos</p>
-  {{service_cards:servico}}
-  <p class="group-title">Peças com instalação</p>
-  {{service_cards:peca}}
+  {{service_links}}
+  <p><a class="btn btn-ghost" href="/servicos">Ver o que está incluído em cada serviço</a></p>
 </section>
 
 <section class="wrap section" aria-labelledby="quem">

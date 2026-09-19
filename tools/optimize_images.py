@@ -31,7 +31,11 @@ PHOTOS = {
     "tela-notebook": ("tela-trocando.webp", 800),
     "assistencia-dell": ("assistencia-dell-notebook-orcamento.png", 900),
     "tecnico-solda": ("banner-quem-somos.jpg", 1400),
+    "circuito": ("banner-principal.jpg", 1600),
 }
+
+# ilustração do site atual (fundo transparente) — o dono gosta dela, então entra no topo do site
+ILLUSTRATIONS = {"notebook-ilustracao": ("banner-01.png", 620)}
 
 
 def save_webp(im: Image.Image, name: str, max_w: int, quality: int = 74) -> None:
@@ -103,6 +107,13 @@ def main() -> None:
             im = bg
         save_webp(im, name, max_w)
         manifest[name] = list(Image.open(OUT / f"{name}.webp").size)
+    for name, (src, max_w) in ILLUSTRATIONS.items():
+        im = Image.open(SRC / src).convert("RGBA")
+        if im.width > max_w:
+            im = im.resize((max_w, round(im.height * max_w / im.width)), Image.LANCZOS)
+        im.save(OUT / f"{name}.webp", "WEBP", quality=82, method=6)  # mantém a transparência
+        print(f"{name}.webp {im.width}x{im.height} {(OUT / (name + '.webp')).stat().st_size // 1024} KB")
+        manifest[name] = list(im.size)
     # dimensões usadas pelo build.py para width/height das <img> (evita salto de layout)
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     # logo original (azul) e versão branca, em PNG pequeno

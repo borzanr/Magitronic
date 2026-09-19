@@ -46,5 +46,13 @@
   "tecnico-solda": [
     1400,
     933
+  ],
+  "circuito": [
+    1600,
+    2266
+  ],
+  "notebook-ilustracao": [
+    500,
+    537
   ]
 }

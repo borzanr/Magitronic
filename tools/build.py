@@ -189,17 +189,34 @@ class Site:
                 f'<button class="btn btn-wa btn-block" type="submit">{ICON_WA}<span>{esc(button)}</span></button>'
                 f'<p class="form-status" role="status" aria-live="polite"></p>{n}</form>')
 
-    def quick_form(self, defeito: str = "") -> str:
-        """Orçamento rápido: só marca, modelo e defeito, direto para o WhatsApp."""
-        inner = ('<div class="grid-2">'
-                 + self.select("marca", "Marca", self.d["brands"] + ["Outra"], fid="q-marca")
-                 + self.field("modelo", "Modelo", required=False, placeholder="Ex.: Inspiron 15 3520", fid="q-modelo")
-                 + "</div>"
-                 + self.select("defeito", "O que está acontecendo?", DEFEITOS, selected=defeito, required=True,
-                               fid="q-defeito"))
-        return self.form_wrap(inner, "quick-form", "Olá! Quero um orçamento para o meu notebook.",
-                              "Orçamento rápido (site)", "whatsapp", "Receber orçamento no WhatsApp",
-                              "Resposta em horário comercial. Sem cadastro.")
+    def quick_form(self, defeito: str = "", inline: bool = False) -> str:
+        """Orçamento rápido: só marca, modelo e defeito, direto para o WhatsApp.
+
+        inline=True usa a barra horizontal que fica sob o topo da home."""
+        fields = (self.select("marca", "Marca", self.d["brands"] + ["Outra"], fid="q-marca")
+                  + self.field("modelo", "Modelo", required=False, placeholder="Ex.: Inspiron 15 3520", fid="q-modelo")
+                  + self.select("defeito", "O que está acontecendo?", DEFEITOS, selected=defeito, required=True,
+                                fid="q-defeito"))
+        inner = fields if inline else (
+            '<div class="grid-2">'
+            + self.select("marca", "Marca", self.d["brands"] + ["Outra"], fid="q-marca")
+            + self.field("modelo", "Modelo", required=False, placeholder="Ex.: Inspiron 15 3520", fid="q-modelo")
+            + "</div>"
+            + self.select("defeito", "O que está acontecendo?", DEFEITOS, selected=defeito, required=True,
+                          fid="q-defeito"))
+        form = self.form_wrap(inner, "quick-form", "Olá! Quero um orçamento para o meu notebook.",
+                              "Orçamento rápido (site)", "whatsapp",
+                              "Receber orçamento" if inline else "Receber orçamento no WhatsApp",
+                              "" if inline else "Resposta em horário comercial. Sem cadastro.")
+        return form.replace('class="lead-form"', 'class="lead-form lead-form-inline"', 1) if inline else form
+
+    def service_links(self) -> str:
+        """Lista compacta de todos os serviços e peças (substitui a grade de 18 cartões na home)."""
+        def col(kind: str, titulo: str) -> str:
+            items = "".join(f'<li><a href="/{s["slug"]}">{esc(s["nav_label"])}</a></li>'
+                            for s in self.services if s["kind"] == kind)
+            return f'<div><p class="group-title">{titulo}</p><ul class="dir-list">{items}</ul></div>'
+        return f'<div class="directory">{col("servico", "Consertos")}{col("peca", "Peças com instalação")}</div>' 
 
     def short_form(self, defeito: str = "", tipo: str = "Conserto", intro: str = "") -> str:
         inner = ('<div class="grid-2">'
@@ -408,21 +425,28 @@ class Site:
 
     def body_attrs(self) -> str:
         attrs = f' data-base="{self.prefix}"' if self.prefix else ""
-        return f' class="theme-b"{attrs}' if self.theme == "b" else attrs
+        return f' class="theme-{self.theme}"{attrs}' if self.theme != "a" else attrs
 
     def theme_css(self) -> str:
-        if self.theme != "b":
+        if self.theme == "a":
             return ""
-        return f'<link rel="stylesheet" href="/assets/css/theme-b.css?v={self.asset_version}">'
+        extra = ""
+        if self.theme == "c":  # a versão C usa uma fonte monoespaçada nos rótulos técnicos
+            extra = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
+                     'family=IBM+Plex+Mono:wght@400;600&display=swap">')
+        return f'{extra}<link rel="stylesheet" href="/assets/css/theme-{self.theme}.css?v={self.asset_version}">'
+
+    #: tema -> (rótulo, caminho em homologação)
+    VERSOES = {"a": ("A · clássica", "/"), "b": ("B · impacto", "/v2/"), "c": ("C · tech", "/v3/")}
 
     def demo_bar(self) -> str:
-        """Barra de protótipo com o seletor entre as duas versões visuais."""
-        here, other = ("B", "A") if self.theme == "b" else ("A", "B")
-        links = ('<a href="/" class="ver-a">Versão A</a><a href="/v2/" class="ver-b">Versão B</a>')
+        """Barra de protótipo com o seletor entre as versões visuais."""
+        links = "".join(
+            f'<a href="{path}" class="ver-{t}{" atual" if t == self.theme else ""}">{esc(label)}</a>'
+            for t, (label, path) in self.VERSOES.items())
         return (self.templates["demo-bar"]
                 .replace("[[switch]]", links)
-                .replace("[[atual]]", here)
-                .replace("[[outra]]", other))
+                .replace("[[atual]]", self.theme.upper()))
 
     def header(self, path: str) -> str:
         def links(kind: str) -> str:
@@ -498,7 +522,8 @@ COMPONENTS = {
     "reviews": lambda s, a: s.reviews(),
     "steps": lambda s, a: s.steps(),
     "service_cards": lambda s, a: s.service_cards(a or "all"),
-    "quick_form": lambda s, a: s.quick_form(a),
+    "quick_form": lambda s, a: s.quick_form("" if a == "inline" else a, inline=(a == "inline")),
+    "service_links": lambda s, a: s.service_links(),
     "short_form": lambda s, a: s.short_form(a),
     "part_form": lambda s, a: s.part_form(a),
     "full_form": lambda s, a: s.full_form(),
@@ -711,10 +736,13 @@ def build(env: str, theme: str = "a", prefix: str = "", out_dir: Path | None = N
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--env", choices=["staging", "production"], default="staging")
-    ap.add_argument("--theme", choices=["a", "b"], default="a", help="versão visual publicada na raiz")
+    ap.add_argument("--theme", choices=["a", "b", "c"], default="a", help="versão visual publicada na raiz")
     ap.add_argument("--no-variant", action="store_true", help="não gerar a segunda versão em /v2")
     args = ap.parse_args()
     build(args.env, theme=args.theme)
     if args.env == "staging" and not args.no_variant:
-        other = "b" if args.theme == "a" else "a"
-        build(args.env, theme=other, prefix="/v2", out_dir=OUT / "v2", clean=False)
+        for t, (_, path) in Site.VERSOES.items():
+            if t == args.theme:
+                continue
+            sub = path.strip("/")
+            build(args.env, theme=t, prefix="/" + sub, out_dir=OUT / sub, clean=False)

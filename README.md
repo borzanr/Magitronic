@@ -2,8 +2,9 @@
 
 Nova versão do site da [Magitronic](https://www.magitronic.com.br) (assistência técnica de notebooks em Moema, SP), feita a partir da auditoria de SEO e conversão. É um site estático gerado por um script Python e publicado pelo GitHub Pages.
 
-- **Homologação — versão A:** https://magitronic.borzanti.com
-- **Homologação — versão B:** https://magitronic.borzanti.com/v2/ (mesma estrutura e conteúdo, direção visual mais marcante)
+- **Homologação — versão A (clássica):** https://magitronic.borzanti.com
+- **Homologação — versão B (impacto):** https://magitronic.borzanti.com/v2/ — azul-noite e âmbar
+- **Homologação — versão C (tech):** https://magitronic.borzanti.com/v3/ — interface escura, ciano e rótulos monoespaçados
 - **Produção (futuro):** https://www.magitronic.com.br
 
 Em homologação todas as páginas têm `noindex`, e a barra do topo permite alternar entre as duas versões.
@@ -19,6 +20,7 @@ src/
   templates/         layout, cabeçalho, rodapé e barra de protótipo
   assets/css/site.css     visual da versão A (base de tudo)
   assets/css/theme-b.css  camada da versão B, carregada depois da base
+  assets/css/theme-c.css  camada da versão C (tema escuro "tech")
   assets/            CSS, JS e imagens otimizadas (WebP)
   img-original/      imagens originais do site atual (fora do Git)
 tools/
@@ -31,11 +33,11 @@ docs/                site gerado — é esta pasta que o GitHub Pages publica
 ## Como usar
 
 ```bash
-python tools/build.py              # versão A em docs/ e versão B em docs/v2/
-python tools/build.py --theme b    # inverte: versão B na raiz e A em /v2
+python tools/build.py              # versão A em docs/, B em docs/v2/ e C em docs/v3/
+python tools/build.py --theme b    # publica a B na raiz e as outras nas subpastas
 python tools/serve.py              # abre em http://localhost:8080
 python tools/build.py --env production            # versão final (A) para produção, sem /v2
-python tools/build.py --env production --theme b  # versão final com a direção visual B
+python tools/build.py --env production --theme b  # versão final com a direção visual B (ou --theme c)
 ```
 
 Depois de editar qualquer coisa em `src/`, rode o `build.py` e faça commit também da pasta `docs/`.
@@ -60,6 +62,6 @@ Depois de editar qualquer coisa em `src/`, rode o `build.py` e faça commit tamb
 - [ ] Coordenadas do endereço: as do site atual (`-23.6084, -46.6957`) parecem não bater com o endereço no mapa. O Google Maps também mostra o bairro como **Indianópolis**, não Moema. Alinhar com o Perfil da Empresa no Google.
 - [ ] CNPJ e responsável pelos dados na política de privacidade.
 - [ ] Fotos reais da loja e da bancada (as atuais são de banco de imagens).
-- [ ] Escolher entre a versão A e a versão B antes de publicar em produção.
+- [ ] Escolher entre as versões A, B e C antes de publicar em produção.
 - [ ] Os 7 artigos antigos do blog: migrar ou redirecionar.
 - [ ] Redirecionamentos 301 das ~16.800 páginas geradas (`/assistencia-manutencao-notebook/...`) para os serviços. O GitHub Pages não faz 301; isso precisa ser feito na hospedagem de produção.

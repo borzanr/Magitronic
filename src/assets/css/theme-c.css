@@ -1,0 +1,184 @@
+/* Magitronic — versão C ("tech")
+   Interface escura, inspirada em painéis de diagnóstico: azul-carbono, ciano elétrico,
+   rótulos em fonte monoespaçada e linhas finas. Carregada depois de site.css. */
+
+body.theme-c {
+  --blue: #35c8f0;            /* ciano elétrico: destaques e links */
+  --blue-700: #7ee0ff;
+  --blue-50: #0f1d2e;
+  --blue-100: #1d3348;
+  --navy: #05080f;
+  --navy-800: #0d1626;
+  --ink: #e7eef8;             /* texto principal sobre fundo escuro */
+  --ink-2: #a3b3c9;
+  --ink-3: #7c8da5;
+  --line: #1c2942;
+  --ground: #05080f;
+  --surface: #0b1220;
+  --wa: #14a05a;
+  --wa-700: #0f8a4c;
+  --star: #ffc247;
+  --radius: 4px;
+  --radius-lg: 8px;
+  --shadow: 0 0 0 1px rgb(53 200 240 / .06), 0 18px 40px rgb(0 0 0 / .5);
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  background:
+    radial-gradient(900px 520px at 78% -8%, rgb(53 200 240 / .16), transparent 62%),
+    radial-gradient(700px 420px at 4% 8%, rgb(41 98 255 / .14), transparent 60%),
+    var(--ground);
+  color: var(--ink);
+}
+
+body.theme-c h1, body.theme-c h2, body.theme-c h3, body.theme-c .h3, body.theme-c .h4 { color: #fff; }
+body.theme-c h1 { font-size: clamp(2.2rem, 5.6vw, 3.6rem); font-weight: 780; letter-spacing: -.02em; }
+body.theme-c .lead { color: var(--ink-2); }
+body.theme-c .prose p, body.theme-c .prose li { color: var(--ink-2); }
+body.theme-c .prose strong { color: #fff; }
+
+/* rótulos técnicos em monoespaçada */
+body.theme-c .eyebrow, body.theme-c .group-title, body.theme-c .facts dt,
+body.theme-c .contact-list .k, body.theme-c .footer-title, body.theme-c .card-meta,
+body.theme-c .quote-bar-title, body.theme-c .sub-title {
+  font-family: var(--mono); letter-spacing: .04em; text-transform: uppercase; font-size: .78rem;
+}
+body.theme-c .eyebrow { color: var(--blue); }
+body.theme-c .quote-bar-title { font-size: .85rem; color: var(--blue); }
+
+/* ---------- superfícies ---------- */
+body.theme-c .card-link, body.theme-c .symptoms li, body.theme-c .symptom-links a,
+body.theme-c .steps li, body.theme-c .review, body.theme-c .faq details,
+body.theme-c .facts-box, body.theme-c .panel, body.theme-c .contact-list li,
+body.theme-c .hero-card, body.theme-c .quote-bar, body.theme-c .table-scroll, body.theme-c .consent {
+  background: linear-gradient(180deg, rgb(255 255 255 / .04), rgb(255 255 255 / .01)), var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+body.theme-c .card-link:hover, body.theme-c .symptom-links a:hover {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px rgb(53 200 240 / .35), 0 0 30px rgb(53 200 240 / .12);
+}
+body.theme-c .card-text, body.theme-c .symptoms p, body.theme-c .symptom-links span { color: var(--ink-2); }
+body.theme-c .card-title, body.theme-c .symptom-links strong { color: #fff; }
+body.theme-c .steps li::before { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+body.theme-c .chips li { background: var(--surface); border-color: var(--line); color: var(--ink); }
+body.theme-c .dir-list a { color: var(--ink-2); }
+body.theme-c .dir-list a:hover { background: var(--blue-50); color: var(--blue); }
+
+/* ---------- topo ---------- */
+body.theme-c .site-header { background: rgb(5 8 15 / .86); backdrop-filter: blur(10px); border-bottom-color: var(--line); }
+body.theme-c .logo img { filter: brightness(0) invert(1); }
+body.theme-c .nav-list > li > a, body.theme-c .sub-toggle, body.theme-c .nav-phone { color: #dbe6f5; }
+body.theme-c .menu-toggle { background: transparent; color: #fff; border-color: var(--line); }
+body.theme-c .nav.open { background: var(--navy); }
+body.theme-c .sub, body.theme-c .sub.open { background: #0a1220; border-color: var(--line); }
+body.theme-c .sub a { color: var(--ink-2); }
+body.theme-c .sub a:hover { color: var(--blue); }
+
+body.theme-c .hero {
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+body.theme-c .hero::before {
+  background-image:
+    linear-gradient(90deg, rgb(53 200 240 / .10) 1px, transparent 1px),
+    linear-gradient(rgb(53 200 240 / .10) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px;
+  background-position: center;
+  opacity: 1;
+  mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 100%);
+}
+body.theme-c .hero h1 span { color: var(--blue); text-shadow: 0 0 28px rgb(53 200 240 / .45); }
+body.theme-c .hero-art img { filter: drop-shadow(0 24px 60px rgb(53 200 240 / .25)); }
+body.theme-c .ticks li::before { border-color: var(--blue); }
+
+body.theme-c .quote-bar { box-shadow: 0 0 0 1px rgb(53 200 240 / .18), 0 20px 50px rgb(0 0 0 / .6); }
+body.theme-c .proof-band {
+  background: linear-gradient(180deg, #070c16, #05080f);
+  border-block: 1px solid var(--line);
+}
+body.theme-c .proof dd { color: var(--blue); }
+body.theme-c .proof dt { color: var(--ink-3); font-family: var(--mono); font-size: .74rem; text-transform: uppercase; }
+
+/* ---------- formulários ---------- */
+body.theme-c .field label, body.theme-c .field .label { color: #dbe6f5; }
+body.theme-c .field input[type="text"], body.theme-c .field input[type="tel"],
+body.theme-c .field input[type="email"], body.theme-c .field select, body.theme-c .field textarea {
+  background: #0a111e; border-color: #22324c; color: var(--ink);
+}
+body.theme-c .field input::placeholder, body.theme-c .field textarea::placeholder { color: #61748f; }
+body.theme-c .field input:focus, body.theme-c .field select:focus, body.theme-c .field textarea:focus {
+  border-color: var(--blue); outline-color: rgb(53 200 240 / .25);
+}
+body.theme-c .check label, body.theme-c .hint, body.theme-c .form-note { color: var(--ink-3); }
+body.theme-c .lead-form legend { color: #fff; }
+
+/* ---------- botões ---------- */
+body.theme-c .btn { border-radius: var(--radius); }
+body.theme-c .btn-primary {
+  background: linear-gradient(180deg, #3fd2f6, #17a8d6); color: #04131a; border-color: transparent;
+  box-shadow: 0 0 24px rgb(53 200 240 / .35);
+}
+body.theme-c .btn-primary:hover { background: linear-gradient(180deg, #62dcfa, #1fb6e6); color: #04131a; }
+body.theme-c .btn-ghost { color: var(--blue); border-color: #23405c; }
+body.theme-c .btn-ghost:hover { border-color: var(--blue); color: #fff; }
+
+/* ---------- páginas internas ---------- */
+body.theme-c .page-hero, body.theme-c .page-head {
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(600px 300px at 85% 0%, rgb(53 200 240 / .12), transparent 60%);
+}
+body.theme-c .page-hero-img { border-color: var(--line); box-shadow: var(--shadow); }
+body.theme-c .breadcrumb a { color: var(--ink-3); }
+body.theme-c .breadcrumb a:hover { color: var(--blue); }
+body.theme-c .facts dd { color: #fff; }
+body.theme-c .facts dt { color: var(--blue); }
+body.theme-c .facts div { border-bottom-color: var(--line); }
+body.theme-c .prose th { background: var(--blue-50); color: #fff; border-bottom-color: var(--line); }
+body.theme-c .prose td { border-bottom-color: var(--line); }
+
+/* ---------- faixas ---------- */
+body.theme-c .band {
+  background:
+    radial-gradient(900px 300px at 20% 0%, rgb(53 200 240 / .16), transparent 60%),
+    linear-gradient(180deg, #070d18, #05080f);
+  border-block: 1px solid var(--line);
+  color: var(--ink-2);
+}
+body.theme-c .band .lead-form { box-shadow: var(--shadow); }
+body.theme-c .cta-box {
+  background:
+    radial-gradient(700px 260px at 85% 0%, rgb(53 200 240 / .22), transparent 60%),
+    linear-gradient(120deg, #0b2233, #05080f);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+}
+
+/* ---------- FAQ, avaliações, mapa ---------- */
+body.theme-c .faq summary { color: #fff; }
+body.theme-c .faq summary::after { color: var(--blue); }
+body.theme-c .faq details > div { color: var(--ink-2); }
+body.theme-c .review blockquote { color: var(--ink); }
+body.theme-c .review figcaption { color: #fff; }
+body.theme-c .map, body.theme-c .map-load { background: #0a111e; color: var(--ink); }
+body.theme-c .map-load {
+  background:
+    linear-gradient(90deg, rgb(53 200 240 / .08) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(rgb(53 200 240 / .08) 1px, transparent 1px) 0 0 / 32px 32px,
+    #0a111e;
+}
+body.theme-c .map-load strong { color: #fff; }
+body.theme-c .map-pin { background: var(--blue); box-shadow: inset 0 0 0 8px var(--blue), inset 0 0 0 14px #05080f; }
+
+/* ---------- rodapé e barra do celular ---------- */
+body.theme-c .site-footer { background: #04070d; border-top: 1px solid var(--line); color: var(--ink-2); }
+body.theme-c .footer-title { color: var(--blue); }
+body.theme-c .footer-links a { color: var(--ink-2); }
+body.theme-c .footer-bottom { border-top-color: var(--line); color: var(--ink-3); }
+body.theme-c .action-bar { background: rgb(5 8 15 / .95); border-top-color: var(--line); }
+body.theme-c .action-bar a { color: var(--ink); }
+body.theme-c .action-bar a + a { border-left-color: var(--line); }
+body.theme-c .action-bar .ab-wa { background: var(--wa); color: #fff; }
+body.theme-c .consent { box-shadow: var(--shadow); }
