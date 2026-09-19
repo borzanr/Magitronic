@@ -1,0 +1,33 @@
+{
+  "slug": "ssd-para-notebooks",
+  "kind": "peca",
+  "order": 23,
+  "nav_label": "SSD para notebook",
+  "card": "SSD SATA e NVMe M.2 compatíveis, com instalação e migração.",
+  "title": "SSD para Notebook SATA e NVMe com Instalação | Magitronic",
+  "description": "SSD para notebook: SATA 2,5\", M.2 SATA e M.2 NVMe compatíveis com o seu modelo, com instalação e migração do sistema em Moema, SP.",
+  "h1": "SSD para notebook",
+  "lead": "O tipo de SSD depende do slot do seu notebook. Conferimos o encaixe e a interface pelo modelo e indicamos o SSD certo, com instalação e migração inclusas.",
+  "image": "ssd-notebook",
+  "image_alt": "SSD de 2,5 polegadas para notebook",
+  "highlights": ["SATA 2,5\", M.2 SATA e M.2 NVMe", "Compatibilidade conferida pelo modelo", "Instalação e migração inclusas"],
+  "wa_msg": "Olá! Quero um SSD para o meu notebook. Marca/modelo: ",
+  "symptoms_title": "Tipos de SSD",
+  "symptoms": [
+    {"t": "SATA 2,5\"", "d": "Substitui o HD tradicional. Serve na maioria dos notebooks até cerca de 2019."},
+    {"t": "M.2 SATA", "d": "Formato de “pente”, com a mesma velocidade do SATA 2,5\"."},
+    {"t": "M.2 NVMe", "d": "Várias vezes mais rápido que o SATA, nos notebooks com slot compatível."}
+  ],
+  "sections": [
+    {"h2": "Compare as opções", "html": "<div class=\"table-scroll\"><table><thead><tr><th>Tipo</th><th>Velocidade típica de leitura</th><th>Indicado para</th></tr></thead><tbody><tr><td>HD 5400 rpm</td><td>~100 MB/s</td><td>Apenas armazenamento</td></tr><tr><td>SSD SATA</td><td>~550 MB/s</td><td>Notebooks mais antigos</td></tr><tr><td>SSD NVMe</td><td>2.000 a 7.000 MB/s</td><td>Notebooks com slot M.2 NVMe</td></tr></tbody></table></div>"},
+    {"h2": "Instalação e migração", "html": "<p>Instalamos o SSD e clonamos o sistema, os programas e os arquivos do disco antigo. Veja como funciona na página <a href=\"/hd-ssd\">troca de HD por SSD</a>.</p>"}
+  ],
+  "facts": [["Capacidades", "240 GB a 2 TB"], ["Instalação", "Mesmo dia"], ["Garantia", "Do fabricante do SSD, mais 90 dias no serviço"], ["Consulta", "Pelo modelo do notebook"]],
+  "faq": [
+    {"q": "Meu notebook aceita NVMe?", "a": "<p>Depende do slot M.2 da placa. Com o modelo do notebook confirmamos se ele aceita NVMe, apenas SATA ou os dois.</p>"},
+    {"q": "Qual marca de SSD vocês usam?", "a": "<p>Trabalhamos com marcas reconhecidas e indicamos no orçamento a marca, o modelo e a garantia do fabricante.</p>"},
+    {"q": "Posso levar o SSD que já comprei?", "a": "<p>Pode. Fazemos a instalação e a migração, e conferimos se ele é compatível.</p>"}
+  ],
+  "related": ["hd-ssd", "memoria-para-notebooks", "recuperacao-de-dados"],
+  "form_peca": "SSD"
+}

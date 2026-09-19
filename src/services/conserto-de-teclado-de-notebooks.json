@@ -1,0 +1,34 @@
+{
+  "slug": "conserto-de-teclado-de-notebooks",
+  "kind": "servico",
+  "order": 10,
+  "nav_label": "Conserto de teclado",
+  "card": "Teclas falhando, soltas ou após líquido: troca de tecla ou do teclado.",
+  "title": "Conserto de Teclado de Notebook em Moema, SP | Magitronic",
+  "description": "Teclas do notebook falhando, soltas ou grudando? Conserto e troca de teclado de notebook para todas as marcas em Moema, SP. Orçamento grátis.",
+  "h1": "Conserto de teclado de notebook",
+  "lead": "Uma tecla solta às vezes se resolve na hora. Teclas que não respondem ou digitam sozinhas geralmente pedem a troca do teclado, que fazemos com a peça do seu modelo.",
+  "image": "teclado-desmontado",
+  "image_alt": "Teclados de notebook ABNT2 prontos para instalação",
+  "highlights": ["Troca de tecla avulsa", "Teclado completo ABNT2 ou US", "Com ou sem retroiluminação"],
+  "wa_msg": "Olá! O teclado do meu notebook está com defeito. Marca/modelo: ",
+  "symptoms_title": "O que costuma acontecer",
+  "symptoms": [
+    {"t": "Tecla solta ou quebrada", "d": "Reencaixe ou troca da tecla e do suporte (tesoura)."},
+    {"t": "Teclas que não funcionam", "d": "Geralmente defeito na membrana: troca do teclado."},
+    {"t": "Digita sozinho", "d": "Curto na membrana, comum depois de contato com líquido."},
+    {"t": "Luz do teclado apagou", "d": "Cabo da retroiluminação ou o próprio teclado."}
+  ],
+  "sections": [
+    {"h2": "Troca de teclado em modelos com teclado fixo", "html": "<p>Em muitos notebooks atuais o teclado vem preso à carcaça superior por rebites plásticos. Nesses casos a troca exige mais cuidado, e em alguns modelos é feita junto com a carcaça. Informamos isso no orçamento.</p>"},
+    {"h2": "ABNT2 ou US?", "html": "<p>O padrão brasileiro (ABNT2) tem as teclas “Ç” e acentos no lugar de costume. Notebooks importados costumam vir com o padrão americano. Podemos manter o original ou trocar pelo padrão que você preferir, quando houver peça compatível. Veja também <a href=\"/teclado-para-notebooks\">teclado para notebook</a>.</p>"}
+  ],
+  "facts": [["Tecla avulsa", "Geralmente na hora"], ["Teclado completo", "1 a 3 dias úteis"], ["Garantia", "90 dias"], ["Padrões", "ABNT2 e US"]],
+  "faq": [
+    {"q": "Dá para trocar só uma tecla?", "a": "<p>Quando o problema é mecânico (tecla solta ou quebrada), sim. Se a tecla não responde, o defeito é na membrana e o teclado precisa ser trocado.</p>"},
+    {"q": "Teclado molhado tem conserto?", "a": "<p>A limpeza pode resolver se for feita logo. Se as teclas continuarem falhando, a troca é a solução definitiva.</p>"},
+    {"q": "Posso usar um teclado USB enquanto isso?", "a": "<p>Pode. É uma boa solução provisória, mas não evita o avanço da oxidação se houve líquido.</p>"}
+  ],
+  "related": ["teclado-para-notebooks", "reparo-de-notebook", "manutencao-de-notebooks"],
+  "form_defeito": "Teclado ou touchpad falhando"
+}

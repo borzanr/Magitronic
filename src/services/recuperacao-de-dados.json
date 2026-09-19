@@ -1,0 +1,35 @@
+{
+  "slug": "recuperacao-de-dados",
+  "kind": "servico",
+  "order": 11,
+  "nav_label": "Recuperação de dados",
+  "card": "HD, SSD, pendrive e cartão: avaliação grátis e sem custo se não recuperar.",
+  "title": "Recuperação de Dados de HD e SSD em São Paulo | Magitronic",
+  "description": "Recuperação de dados de HD, SSD, pendrive e cartão de memória em Moema, SP. Avaliação gratuita, relatório dos arquivos recuperáveis e sem custo se não recuperar.",
+  "h1": "Recuperação de dados de HD, SSD e pendrive",
+  "lead": "Fotos, documentos e arquivos de trabalho que sumiram depois de formatação, vírus, queda ou defeito. A avaliação é grátis e, se não for possível recuperar, você não paga nada.",
+  "image": "reparo-hd",
+  "image_alt": "Técnico com luvas manipulando um HD aberto em ambiente de laboratório",
+  "highlights": ["Avaliação gratuita", "Relatório do que pode ser recuperado", "Sigilo total dos arquivos"],
+  "wa_msg": "Olá! Preciso recuperar arquivos. Tipo de mídia (HD, SSD, pendrive) e o que aconteceu: ",
+  "symptoms_title": "Situações que atendemos",
+  "symptoms": [
+    {"t": "Formatação por engano", "d": "Arquivos apagados ou partição removida sem querer."},
+    {"t": "HD fazendo barulho", "d": "Cliques ou ruídos. Desligue imediatamente para não piorar o dano."},
+    {"t": "Não é reconhecido", "d": "HD, SSD ou pendrive que não aparece no computador."},
+    {"t": "Arquivos corrompidos ou vírus", "d": "Arquivos que não abrem ou foram criptografados."},
+    {"t": "Notebook que não liga", "d": "Retiramos o armazenamento e copiamos seus arquivos."}
+  ],
+  "sections": [
+    {"h2": "Como funciona", "html": "<ol><li><strong>Avaliação gratuita:</strong> analisamos a mídia e identificamos o tipo de falha.</li><li><strong>Pré-orçamento:</strong> enviamos o valor e pedimos sua autorização para manipular a peça.</li><li><strong>Relatório:</strong> você recebe a lista dos arquivos que podem ser recuperados antes de pagar.</li><li><strong>Entrega:</strong> os dados são copiados para uma mídia nova ou para a sua.</li></ol><p>Se não for possível recuperar os dados, você não tem nenhum custo.</p>"},
+    {"h2": "O que não fazer", "html": "<ul><li>Não instale programas de recuperação no mesmo disco que perdeu os arquivos.</li><li>Não continue ligando um HD que faz barulho.</li><li>Não abra o HD: poeira no prato causa perda definitiva.</li></ul>"}
+  ],
+  "facts": [["Avaliação", "Grátis"], ["Se não recuperar", "Sem custo"], ["Mídias", "HD, SSD, pendrive, cartão, HD externo"], ["Sigilo", "Seus arquivos não são abertos"]],
+  "faq": [
+    {"q": "Quanto custa recuperar dados?", "a": "<p>Depende do tipo de falha (lógica ou física) e da capacidade da mídia. O valor é informado após a avaliação gratuita.</p>"},
+    {"q": "Dá para recuperar dados de SSD?", "a": "<p>Em muitos casos, sim, mas SSDs apagam arquivos excluídos mais rápido que HDs. Quanto antes você parar de usar, melhor.</p>"},
+    {"q": "Quanto tempo leva?", "a": "<p>Falhas lógicas costumam levar de 2 a 5 dias úteis. Falhas físicas podem levar mais, e informamos o prazo no pré-orçamento.</p>"}
+  ],
+  "related": ["hd-ssd", "conserto-de-notebooks", "reparo-de-notebook"],
+  "form_defeito": "Recuperação de dados"
+}

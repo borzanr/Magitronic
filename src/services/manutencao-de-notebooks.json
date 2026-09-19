@@ -1,0 +1,35 @@
+{
+  "slug": "manutencao-de-notebooks",
+  "kind": "servico",
+  "order": 5,
+  "nav_label": "Limpeza e manutenção preventiva",
+  "card": "Notebook esquentando, lento ou barulhento: limpeza interna e pasta térmica.",
+  "title": "Manutenção e Limpeza de Notebook em Moema, SP | Magitronic",
+  "description": "Notebook esquentando, lento ou com cooler barulhento? Limpeza interna, troca de pasta térmica e revisão preventiva em Moema, SP. Orçamento grátis.",
+  "h1": "Manutenção preventiva e limpeza de notebook",
+  "lead": "Poeira no cooler e pasta térmica ressecada fazem o notebook esquentar, perder desempenho e desligar sozinho. Uma limpeza bem feita resolve a maioria desses casos.",
+  "image": "bancada-notebook-aberto",
+  "image_alt": "Notebook aberto mostrando cooler, placa-mãe e memória durante a limpeza",
+  "highlights": ["Limpeza do cooler e dos dissipadores", "Troca da pasta térmica", "Checagem de SSD e bateria"],
+  "wa_msg": "Olá! Quero orçamento de limpeza/manutenção do meu notebook. Marca/modelo: ",
+  "symptoms_title": "Sinais de que está na hora",
+  "symptoms": [
+    {"t": "Base muito quente", "d": "Desconforto para usar no colo ou teclado quente durante tarefas simples."},
+    {"t": "Cooler barulhento", "d": "Ventoinha acelerando o tempo todo, ou com ruído de raspar."},
+    {"t": "Lento e travando", "d": "O processador reduz a velocidade para não superaquecer."},
+    {"t": "Desliga sozinho", "d": "Proteção térmica atuando em jogos, vídeo ou chamadas."}
+  ],
+  "sections": [
+    {"h2": "O que está incluído na manutenção", "html": "<ul><li>Desmontagem e limpeza do cooler, dos dissipadores e das saídas de ar.</li><li>Troca da pasta térmica do processador e da placa de vídeo (e dos thermal pads, quando necessário).</li><li>Limpeza do teclado, das portas e da carcaça.</li><li>Teste de temperatura antes e depois, e checagem da saúde do SSD e da bateria.</li></ul>"},
+    {"h2": "Lento mesmo depois da limpeza?", "html": "<p>Se o notebook ainda usa HD mecânico, a troca por SSD é o upgrade que mais faz diferença: o sistema liga em segundos e os programas abrem muito mais rápido. Veja a <a href=\"/hd-ssd\">troca de HD por SSD</a> e o <a href=\"/memoria-para-notebooks\">upgrade de memória</a>.</p>"},
+    {"h2": "Com que frequência fazer", "html": "<p>A cada 12 meses para uso comum e a cada 6 meses para notebooks gamer ou usados em ambientes com poeira e pelos de animais.</p>"}
+  ],
+  "facts": [["Prazo médio", "1 dia útil"], ["Frequência", "A cada 6 a 12 meses"], ["Garantia", "90 dias"], ["Inclui", "Teste de temperatura antes e depois"]],
+  "faq": [
+    {"q": "Limpeza resolve notebook lento?", "a": "<p>Resolve quando a lentidão vem do superaquecimento. Se o gargalo for o HD, o mais indicado é o upgrade para SSD.</p>"},
+    {"q": "Posso limpar em casa com ar comprimido?", "a": "<p>Por fora, sim. Mas a poeira compactada no dissipador e a pasta térmica ressecada só saem desmontando o notebook.</p>"},
+    {"q": "Perco a garantia do fabricante?", "a": "<p>Se o notebook ainda está na garantia de fábrica, verifique as regras do fabricante antes. Fora da garantia, não há problema.</p>"}
+  ],
+  "related": ["cooler-para-notebooks", "hd-ssd", "memoria-para-notebooks"],
+  "form_defeito": "Esquentando ou fazendo barulho"
+}

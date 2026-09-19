@@ -1,0 +1,34 @@
+{
+  "slug": "cooler-para-notebooks",
+  "kind": "peca",
+  "order": 25,
+  "nav_label": "Cooler para notebook",
+  "card": "Ventoinha barulhenta ou parada: troca do cooler e limpeza.",
+  "title": "Cooler para Notebook: Troca e Limpeza em Moema, SP | Magitronic",
+  "description": "Cooler do notebook barulhento, parado ou fraco? Troca do cooler (ventoinha) interno com limpeza e pasta térmica nova em Moema, SP. Orçamento grátis.",
+  "h1": "Cooler para notebook: troca e limpeza",
+  "lead": "O cooler interno tira o calor do processador. Quando ele faz barulho, gira fraco ou para, o notebook esquenta, fica lento e pode desligar. Trocamos a ventoinha e já fazemos a limpeza.",
+  "image": "bancada-notebook-aberto",
+  "image_alt": "Notebook aberto mostrando o cooler interno ao lado da placa-mãe",
+  "highlights": ["Cooler compatível com o seu modelo", "Pasta térmica nova inclusa", "Teste de temperatura"],
+  "wa_msg": "Olá! O cooler do meu notebook está com problema (barulho / não gira). Marca/modelo: ",
+  "symptoms_title": "Sinais de cooler com defeito",
+  "symptoms": [
+    {"t": "Ruído de raspar ou chiado", "d": "Rolamento gasto. A tendência é piorar até travar."},
+    {"t": "Não sai ar quente", "d": "A ventoinha parou ou a saída está entupida de poeira."},
+    {"t": "Desliga em jogos ou vídeos", "d": "Proteção contra superaquecimento atuando."},
+    {"t": "Aviso de erro do cooler ao ligar", "d": "Alguns modelos Dell, HP e Lenovo avisam a falha no boot."}
+  ],
+  "sections": [
+    {"h2": "Limpeza ou troca?", "html": "<p>Se o cooler gira normalmente e o problema é poeira, a <a href=\"/manutencao-de-notebooks\">limpeza interna</a> resolve. Se há ruído de rolamento, pás quebradas ou o motor não gira, a troca é necessária. Na troca, sempre limpamos o dissipador e renovamos a pasta térmica.</p>"},
+    {"h2": "E a base refrigerada (cooler externo)?", "html": "<p>Bases com ventoinha ajudam em notebooks gamer, mas não substituem o cooler interno funcionando nem a limpeza periódica.</p>"}
+  ],
+  "facts": [["Prazo médio", "1 a 2 dias úteis"], ["Inclui", "Limpeza e pasta térmica"], ["Garantia", "90 dias"], ["Consulta", "Pelo modelo do notebook"]],
+  "faq": [
+    {"q": "Dá para lubrificar o cooler em vez de trocar?", "a": "<p>É uma solução paliativa que dura pouco. A troca é o mais seguro para o processador.</p>"},
+    {"q": "Notebook gamer tem dois coolers?", "a": "<p>Muitos têm, um para o processador e outro para a placa de vídeo. Verificamos os dois no diagnóstico.</p>"},
+    {"q": "Quanto tempo dura um cooler?", "a": "<p>Varia muito com o uso e a poeira, mas é comum durar de 3 a 5 anos com limpezas periódicas.</p>"}
+  ],
+  "related": ["manutencao-de-notebooks", "conserto-de-notebooks", "memoria-para-notebooks"],
+  "form_peca": "Cooler"
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "teclado-para-notebooks",
+  "kind": "peca",
+  "order": 24,
+  "nav_label": "Teclado para notebook",
+  "card": "Teclado ABNT2 ou US para o seu modelo, com ou sem retroiluminação.",
+  "title": "Teclado para Notebook ABNT2 com Instalação | Magitronic",
+  "description": "Teclado para notebook Dell, Lenovo, HP, Acer, Asus e Samsung, ABNT2 ou US, com ou sem retroiluminação, com instalação em Moema, SP.",
+  "h1": "Teclado para notebook",
+  "lead": "Teclados de notebook mudam de modelo para modelo: formato, cabo flat, posição dos parafusos e retroiluminação. Conferimos tudo pelo seu modelo e instalamos.",
+  "image": "teclado-desmontado",
+  "image_alt": "Dois teclados de notebook ABNT2, um visto de frente e outro por trás",
+  "highlights": ["ABNT2 (com Ç) ou US", "Com ou sem retroiluminação", "Instalação inclusa"],
+  "wa_msg": "Olá! Quero consultar um teclado. Marca/modelo do notebook: ",
+  "symptoms_title": "O que conferimos antes",
+  "symptoms": [
+    {"t": "Padrão do layout", "d": "ABNT2 (com Ç e acentos) ou US internacional."},
+    {"t": "Retroiluminação", "d": "Se o original acende, o novo também precisa ter luz."},
+    {"t": "Formato e fixação", "d": "Com ou sem moldura, parafusado ou rebitado na carcaça."},
+    {"t": "Cabo flat", "d": "Posição e tamanho do cabo compatíveis com a placa."}
+  ],
+  "sections": [
+    {"h2": "Como encontrar o código do teclado", "html": "<p>O modelo do notebook geralmente basta. Se tiver o código do teclado (etiqueta atrás da peça, ex.: <em>NSK-...</em> ou <em>SN20...</em>), melhor ainda. Mande pelo WhatsApp e confirmamos disponibilidade e prazo.</p>"},
+    {"h2": "Instalação", "html": "<p>Em notebooks com teclado rebitado na carcaça, a troca é mais trabalhosa, e às vezes a carcaça superior já vem com o teclado. Tudo é informado no orçamento. Veja também o <a href=\"/conserto-de-teclado-de-notebooks\">conserto de teclado</a>.</p>"}
+  ],
+  "facts": [["Padrões", "ABNT2 e US"], ["Instalação", "1 a 3 dias úteis"], ["Garantia", "90 dias"], ["Consulta", "Pelo modelo ou código do teclado"]],
+  "faq": [
+    {"q": "Posso trocar um teclado US por ABNT2?", "a": "<p>Quando existe versão ABNT2 compatível com o seu modelo, sim. Conferimos antes.</p>"},
+    {"q": "Vocês vendem só o teclado, sem instalar?", "a": "<p>Sim, mas recomendamos a instalação na loja, principalmente em modelos com teclado rebitado.</p>"},
+    {"q": "Tem teclado para notebook gamer?", "a": "<p>Temos para os modelos gamer mais comuns, inclusive com retroiluminação RGB. Consulte pelo modelo.</p>"}
+  ],
+  "related": ["conserto-de-teclado-de-notebooks", "reparo-de-notebook", "bateria-para-notebooks"],
+  "form_peca": "Teclado"
+}

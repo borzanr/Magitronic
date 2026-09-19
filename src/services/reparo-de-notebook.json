@@ -1,0 +1,34 @@
+{
+  "slug": "reparo-de-notebook",
+  "kind": "servico",
+  "order": 4,
+  "nav_label": "Líquido ou queda",
+  "card": "Derramou café, água ou o notebook caiu: o que fazer e como consertamos.",
+  "title": "Reparo de Notebook Molhado ou Após Queda em SP | Magitronic",
+  "description": "Derramou líquido ou o notebook caiu? Reparo de notebook molhado, carcaça, dobradiça e tela em Moema, SP. Quanto antes, maior a chance de salvar.",
+  "h1": "Reparo de notebook molhado ou após queda",
+  "lead": "Líquido e quedas são as causas de defeito que mais pioram com o tempo. Desligue o notebook e traga o quanto antes: a oxidação avança em horas.",
+  "image": "tecnico-solda",
+  "image_alt": "Técnico reparando a placa de um notebook com ferro de solda",
+  "highlights": ["Limpeza e desoxidação da placa", "Troca de carcaça e dobradiça", "Avaliação grátis"],
+  "wa_msg": "Olá! Caiu líquido no meu notebook (ou ele caiu). Marca/modelo: ",
+  "symptoms_title": "Primeiros socorros",
+  "symptoms": [
+    {"t": "1. Desligue na hora", "d": "Segure o botão de ligar até desligar e tire o carregador da tomada."},
+    {"t": "2. Não tente ligar para testar", "d": "Ligar com líquido dentro causa curto e pode queimar a placa."},
+    {"t": "3. Vire de cabeça para baixo", "d": "Aberto em V invertido, para o líquido escorrer para fora do teclado."},
+    {"t": "4. Nada de secador ou arroz", "d": "O calor espalha a umidade e o arroz não tira a oxidação dos componentes."}
+  ],
+  "sections": [
+    {"h2": "Como consertamos notebook molhado", "html": "<p>Desmontamos o notebook por completo, retiramos a placa e fazemos a limpeza com produtos próprios para eletrônica, removendo resíduos de açúcar, sal e oxidação. Depois testamos os circuitos e trocamos apenas os componentes danificados.</p><p>Líquidos com açúcar (café, refrigerante, suco) são os mais agressivos. Mesmo que o notebook pareça funcionar, a oxidação pode causar defeito semanas depois.</p>"},
+    {"h2": "Depois de uma queda", "html": "<p>As consequências mais comuns são tela trincada, dobradiça quebrada, carcaça rachada e conector de carga solto. Fazemos a troca de cada peça separadamente, sem precisar substituir o conjunto inteiro quando não é necessário.</p>"}
+  ],
+  "facts": [["Avaliação", "Grátis"], ["Prazo médio", "2 a 5 dias úteis"], ["Garantia", "90 dias nas peças trocadas"], ["Importante", "Traga o quanto antes"]],
+  "faq": [
+    {"q": "Notebook molhado tem conserto?", "a": "<p>Muitas vezes, sim, principalmente se foi desligado logo e trazido rápido. A chance cai a cada dia de oxidação.</p>"},
+    {"q": "Consigo recuperar os arquivos?", "a": "<p>Em geral, sim: o SSD costuma resistir melhor que a placa. Veja a <a href=\"/recuperacao-de-dados\">recuperação de dados</a>.</p>"},
+    {"q": "O teclado molhado precisa ser trocado?", "a": "<p>Se as teclas ficaram grudando ou falhando, geralmente sim, porque a membrana interna oxida. Temos teclados para os modelos mais comuns.</p>"}
+  ],
+  "related": ["conserto-de-placa-mae-de-notebooks", "conserto-de-teclado-de-notebooks", "troca-de-tela-de-notebooks"],
+  "form_defeito": "Caiu líquido ou sofreu queda"
+}

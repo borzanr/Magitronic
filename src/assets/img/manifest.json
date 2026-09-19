@@ -1,0 +1,50 @@
+{
+  "bancada-notebook-aberto": [
+    790,
+    527
+  ],
+  "teclado-desmontado": [
+    790,
+    790
+  ],
+  "macbook-aberto": [
+    800,
+    448
+  ],
+  "reparo-hd": [
+    600,
+    400
+  ],
+  "ssd-notebook": [
+    790,
+    790
+  ],
+  "memoria-ram": [
+    450,
+    450
+  ],
+  "bateria-notebook": [
+    450,
+    450
+  ],
+  "carregador-notebook": [
+    790,
+    790
+  ],
+  "troca-de-tela": [
+    570,
+    345
+  ],
+  "tela-notebook": [
+    400,
+    272
+  ],
+  "assistencia-dell": [
+    790,
+    637
+  ],
+  "tecnico-solda": [
+    1400,
+    933
+  ]
+}

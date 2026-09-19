@@ -1,0 +1,34 @@
+{
+  "slug": "carregadores-para-notebook",
+  "kind": "peca",
+  "order": 21,
+  "nav_label": "Carregador para notebook",
+  "card": "Fonte com a tensão, a potência e o conector certos para o seu notebook.",
+  "title": "Carregador para Notebook Dell, Lenovo, HP e Acer | Magitronic",
+  "description": "Carregador (fonte) para notebook com a tensão, potência e conector certos para o seu modelo. Teste grátis do seu carregador em Moema, SP.",
+  "h1": "Carregador para notebook",
+  "lead": "Carregador errado esquenta, carrega devagar ou danifica a placa. Conferimos tensão, potência e conector antes de indicar a fonte, e testamos a sua de graça.",
+  "image": "carregador-notebook",
+  "image_alt": "Carregador de notebook com cabo e conector redondo",
+  "highlights": ["Teste grátis do seu carregador", "Tensão, potência e conector conferidos", "Modelos USB-C e conector redondo"],
+  "wa_msg": "Olá! Preciso de um carregador. Marca/modelo do notebook (ou dados da etiqueta da fonte): ",
+  "symptoms_title": "Quando o problema é o carregador",
+  "symptoms": [
+    {"t": "Luz da fonte apagada", "d": "Nenhum sinal de energia, mesmo trocando a tomada."},
+    {"t": "Carrega só em certa posição", "d": "Fio rompido perto do conector. Pode também ser o conector da placa."},
+    {"t": "Aviso de “carregador incompatível”", "d": "Potência menor que a exigida pelo notebook."},
+    {"t": "Esquenta demais", "d": "Fonte fraca ou com defeito. Troque por segurança."}
+  ],
+  "sections": [
+    {"h2": "Como escolher o carregador certo", "html": "<p>Na etiqueta da fonte original estão os três dados que importam:</p><ul><li><strong>Tensão (V):</strong> precisa ser igual, por exemplo 19,5 V.</li><li><strong>Potência (W) ou corrente (A):</strong> igual ou maior que a original, por exemplo 65 W ou 90 W.</li><li><strong>Conector:</strong> formato e diâmetro, ou USB-C com Power Delivery.</li></ul><p>Mande uma foto da etiqueta pelo WhatsApp e indicamos o modelo certo.</p>"},
+    {"h2": "Carregador universal serve?", "html": "<p>Serve como quebra-galho se a tensão, a potência e a ponteira estiverem certas. Para uso diário, prefira uma fonte específica para o modelo.</p>"}
+  ],
+  "facts": [["Teste do seu carregador", "Grátis"], ["Tipos", "Conector redondo, pino central e USB-C"], ["Garantia", "Conforme a peça"], ["Consulta", "Por foto da etiqueta"]],
+  "faq": [
+    {"q": "Posso usar um carregador de celular USB-C?", "a": "<p>Só se ele tiver potência suficiente (geralmente 45 W ou mais) e Power Delivery. Carregadores de celular comuns não dão conta.</p>"},
+    {"q": "Como sei se é o carregador ou o notebook?", "a": "<p>Traga os dois: medimos a saída da fonte e o conector do notebook no diagnóstico gratuito.</p>"},
+    {"q": "Carregador genérico estraga o notebook?", "a": "<p>Uma fonte de baixa qualidade ou com tensão errada pode, sim, danificar a placa. Por isso indicamos modelos testados.</p>"}
+  ],
+  "related": ["bateria-para-notebooks", "conserto-de-notebooks", "conserto-de-placa-mae-de-notebooks"],
+  "form_peca": "Carregador / fonte"
+}

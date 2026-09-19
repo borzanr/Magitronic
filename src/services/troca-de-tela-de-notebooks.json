@@ -1,0 +1,34 @@
+{
+  "slug": "troca-de-tela-de-notebooks",
+  "kind": "servico",
+  "order": 8,
+  "nav_label": "Troca de tela",
+  "card": "Tela quebrada ou trincada: troca pelo painel compatível com o seu modelo.",
+  "title": "Troca de Tela de Notebook em Moema, SP | Magitronic",
+  "description": "Tela de notebook quebrada ou trincada? Troca de tela LED, IPS e touch para Dell, Lenovo, HP, Acer, Samsung e MacBook em Moema. Orçamento grátis.",
+  "h1": "Troca de tela de notebook",
+  "lead": "Tela trincada, manchada ou com vazamento de cristal líquido não tem conserto: é preciso trocar o painel. Fazemos a troca com a tela certa para o seu modelo.",
+  "image": "troca-de-tela",
+  "image_alt": "Técnico removendo a moldura para trocar a tela de um notebook",
+  "highlights": ["Telas LED, IPS, Full HD e touch", "Confirmamos a tela certa pelo modelo", "Garantia de 90 dias"],
+  "wa_msg": "Olá! Quero orçamento de troca de tela. Marca/modelo do notebook: ",
+  "symptoms_title": "Quando a tela precisa ser trocada",
+  "symptoms": [
+    {"t": "Trincada ou quebrada", "d": "Rachaduras visíveis, mesmo que a imagem ainda apareça."},
+    {"t": "Manchas escuras ou coloridas", "d": "Vazamento de cristal líquido após pancada ou pressão."},
+    {"t": "Pixels mortos em faixa", "d": "Linhas fixas que não mudam com a imagem."},
+    {"t": "Touch sem resposta", "d": "Em notebooks 2 em 1, o vidro sensível ao toque pode precisar de troca."}
+  ],
+  "sections": [
+    {"h2": "Como escolhemos a tela certa", "html": "<p>Telas de notebook variam em tamanho, resolução, tipo de conector (30 ou 40 pinos), tipo de painel (TN ou IPS), taxa de atualização e fixação. Com o modelo exato do notebook confirmamos a peça compatível antes da troca, sem improviso.</p><div class=\"table-scroll\"><table><thead><tr><th>Tipo</th><th>Para quem</th></tr></thead><tbody><tr><td>HD TN</td><td>Notebooks de entrada, menor custo</td></tr><tr><td>Full HD IPS</td><td>Cores e ângulo de visão melhores</td></tr><tr><td>120 Hz ou 144 Hz</td><td>Notebooks gamer</td></tr><tr><td>Touch</td><td>Modelos 2 em 1</td></tr></tbody></table></div>"},
+    {"h2": "Tela piscando ou sem imagem?", "html": "<p>Nesses casos o painel muitas vezes está bom, e o problema é o cabo flat, a iluminação ou a placa. Veja o <a href=\"/conserto-de-tela-de-notebooks\">conserto de tela</a> antes de pensar em trocar.</p>"}
+  ],
+  "facts": [["Prazo médio", "Mesmo dia a 3 dias úteis, com a tela em estoque"], ["Garantia", "90 dias"], ["Tipos", "LED, IPS, 120/144 Hz e touch"], ["Orçamento", "Grátis, pelo modelo do notebook"]],
+  "faq": [
+    {"q": "Quanto custa trocar a tela do notebook?", "a": "<p>Depende do tamanho, da resolução e do tipo de painel. Com o modelo do seu notebook passamos o valor exato pelo WhatsApp.</p>"},
+    {"q": "A troca é feita na hora?", "a": "<p>Com a tela em estoque, muitas trocas ficam prontas no mesmo dia. Quando a peça precisa ser encomendada, informamos o prazo.</p>"},
+    {"q": "Posso comprar a tela e trazer só para instalar?", "a": "<p>Pode, mas recomendamos confirmar a compatibilidade com a gente antes: é comum comprar a tela com o conector errado.</p>"}
+  ],
+  "related": ["conserto-de-tela-de-notebooks", "reparo-de-notebook", "manutencao-de-macbooks"],
+  "form_defeito": "Tela quebrada, piscando ou sem imagem"
+}

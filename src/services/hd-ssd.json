@@ -1,0 +1,34 @@
+{
+  "slug": "hd-ssd",
+  "kind": "servico",
+  "order": 12,
+  "nav_label": "Troca de HD por SSD",
+  "card": "Notebook muito mais rápido, com o sistema e os arquivos migrados.",
+  "title": "Troca de HD por SSD em Notebook com Migração | Magitronic",
+  "description": "Troque o HD do notebook por SSD e deixe-o muito mais rápido, com sistema, programas e arquivos migrados. Instalação em Moema, SP. Orçamento grátis.",
+  "h1": "Troca de HD por SSD no notebook",
+  "lead": "É o upgrade que mais muda a experiência de um notebook antigo: liga em segundos e abre programas sem espera. Migramos o sistema e os arquivos, e você continua de onde parou.",
+  "image": "ssd-notebook",
+  "image_alt": "SSD SATA de 2,5 polegadas usado para substituir o HD do notebook",
+  "highlights": ["Clonagem do sistema e dos arquivos", "SSD SATA ou NVMe, conforme o modelo", "Instalação no mesmo dia"],
+  "wa_msg": "Olá! Quero trocar o HD do meu notebook por SSD. Marca/modelo: ",
+  "symptoms_title": "Quando vale a pena",
+  "symptoms": [
+    {"t": "Demora para ligar", "d": "Mais de um minuto até conseguir usar."},
+    {"t": "Disco sempre em 100%", "d": "No Gerenciador de Tarefas, o disco vive no máximo."},
+    {"t": "HD com barulho ou lento", "d": "Sinal de desgaste. Migre antes que ele falhe."},
+    {"t": "Notebook com 4 anos ou mais", "d": "Com SSD, costuma ganhar mais alguns anos de uso."}
+  ],
+  "sections": [
+    {"h2": "Como é feita a troca", "html": "<ol><li>Conferimos o tipo de SSD compatível (SATA 2,5\" ou M.2 SATA/NVMe).</li><li>Clonamos o HD para o SSD, com Windows, programas e arquivos.</li><li>Instalamos o SSD e testamos o desempenho.</li><li>O HD antigo fica com você, ou pode virar um HD externo com um case USB.</li></ol>"},
+    {"h2": "Qual capacidade escolher", "html": "<p>Para uso comum, 480 GB a 512 GB costumam ser suficientes. Se você guarda muitas fotos e vídeos, prefira 1 TB. Veja os modelos em <a href=\"/ssd-para-notebooks\">SSD para notebook</a>.</p>"}
+  ],
+  "facts": [["Prazo médio", "Mesmo dia"], ["Inclui", "Clonagem do sistema e dos arquivos"], ["Garantia", "90 dias no serviço, SSD com garantia do fabricante"], ["Compatibilidade", "Conferida pelo modelo"]],
+  "faq": [
+    {"q": "Perco meus arquivos na troca?", "a": "<p>Não. Clonamos o disco inteiro para o SSD. Se o HD estiver com falha, fazemos a recuperação antes.</p>"},
+    {"q": "Posso manter o HD e adicionar o SSD?", "a": "<p>Em notebooks com dois compartimentos (M.2 + 2,5\"), sim: o SSD fica com o sistema e o HD com os arquivos.</p>"},
+    {"q": "Preciso reinstalar o Windows?", "a": "<p>Não, com a clonagem ele continua o mesmo, ativado e com seus programas.</p>"}
+  ],
+  "related": ["ssd-para-notebooks", "memoria-para-notebooks", "manutencao-de-notebooks"],
+  "form_defeito": "Upgrade (SSD ou memória)"
+}

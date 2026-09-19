@@ -1,0 +1,34 @@
+{
+  "slug": "bateria-para-notebooks",
+  "kind": "peca",
+  "order": 20,
+  "nav_label": "Bateria para notebook",
+  "card": "Bateria que não segura carga ou estufou, com instalação e teste.",
+  "title": "Bateria para Notebook com Instalação em Moema, SP | Magitronic",
+  "description": "Bateria para notebook Dell, Lenovo, HP, Acer, Asus, Samsung e MacBook, com instalação e teste em Moema, SP. Consulte disponibilidade pelo WhatsApp.",
+  "h1": "Bateria para notebook com instalação",
+  "lead": "Se o notebook só funciona na tomada, desliga com carga ou a bateria estufou, é hora de trocar. Conferimos a bateria certa pelo modelo e instalamos na hora.",
+  "image": "bateria-notebook",
+  "image_alt": "Bateria de notebook externa de seis células",
+  "highlights": ["Bateria compatível com o seu modelo", "Instalação e teste inclusos", "Descarte correto da bateria antiga"],
+  "wa_msg": "Olá! Quero consultar uma bateria. Marca/modelo do notebook: ",
+  "symptoms_title": "Sinais de que a bateria acabou",
+  "symptoms": [
+    {"t": "Dura poucos minutos", "d": "A carga some rápido, mesmo em tarefas leves."},
+    {"t": "Desliga com carga sobrando", "d": "O indicador mostra 20% ou 30% e o notebook apaga."},
+    {"t": "Bateria estufada", "d": "Touchpad levantando ou carcaça abrindo. Pare de carregar e traga logo: há risco."},
+    {"t": "“Considere substituir a bateria”", "d": "Aviso do Windows ou do macOS indicando desgaste."}
+  ],
+  "sections": [
+    {"h2": "Como identificar a bateria certa", "html": "<p>A bateria é escolhida pelo modelo do notebook e pelo código da própria bateria (ex.: <em>L19M3PF7</em>, <em>WDX0R</em>). Tensão (V) e capacidade (Wh) precisam ser compatíveis. Mande uma foto da etiqueta pelo WhatsApp e confirmamos.</p>"},
+    {"h2": "Interna ou removível", "html": "<p>A maioria dos notebooks atuais tem bateria interna, que exige abrir o equipamento. Por isso a instalação está inclusa, junto com o teste de carga e a calibração.</p>"}
+  ],
+  "facts": [["Instalação", "Na hora, com a peça em estoque"], ["Garantia", "Conforme a peça, informada no orçamento"], ["Consulta", "Pelo modelo ou código da bateria"], ["Descarte", "Bateria antiga descartada corretamente"]],
+  "faq": [
+    {"q": "Quanto tempo dura uma bateria de notebook?", "a": "<p>Em geral de 2 a 4 anos, ou de 300 a 1.000 ciclos de carga, dependendo do uso e do calor.</p>"},
+    {"q": "Posso usar o notebook sem bateria?", "a": "<p>Em muitos modelos, sim, ligado na tomada. Mas uma queda de energia desliga tudo de uma vez, com risco de perder o trabalho aberto.</p>"},
+    {"q": "Bateria estufada é perigosa?", "a": "<p>Sim. Pare de carregar, não perfure nem aperte e traga para a troca o quanto antes.</p>"}
+  ],
+  "related": ["carregadores-para-notebook", "conserto-de-notebooks", "manutencao-de-macbooks"],
+  "form_peca": "Bateria"
+}

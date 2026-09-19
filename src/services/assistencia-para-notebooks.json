@@ -1,0 +1,36 @@
+{
+  "slug": "assistencia-para-notebooks",
+  "kind": "servico",
+  "order": 2,
+  "nav_label": "Assistência por marca",
+  "card": "Dell, Lenovo, HP, Acer, Asus, Samsung e outras — defeitos típicos de cada uma.",
+  "title": "Assistência para Notebooks Dell, Lenovo, HP e Acer | Magitronic",
+  "description": "Assistência para notebooks Dell, Lenovo, HP, Acer, Asus, Samsung, Positivo e Vaio em Moema, SP. Conhecemos os defeitos de cada marca. Orçamento grátis.",
+  "h1": "Assistência para notebooks de todas as marcas",
+  "lead": "Cada fabricante tem seus pontos fracos. Conhecer os defeitos típicos de cada linha acelera o diagnóstico e evita troca de peça desnecessária.",
+  "image": "assistencia-dell",
+  "image_alt": "Notebook Dell gamer aberto, visto de frente e de trás",
+  "highlights": ["Fora da garantia do fabricante", "Peças para os modelos mais vendidos", "Orçamento grátis por escrito"],
+  "wa_msg": "Olá! Quero orçamento para o meu notebook. Marca e modelo: ",
+  "symptoms_title": "Defeitos mais comuns por marca",
+  "symptoms": [
+    {"t": "Dell (Inspiron, Vostro, G15)", "d": "Dobradiças que soltam a carcaça, conector de carga gasto e aquecimento nos modelos gamer."},
+    {"t": "Lenovo (IdeaPad, ThinkPad, Legion)", "d": "Teclado com teclas falhando, bateria que não carrega e tela com listras."},
+    {"t": "HP (Pavilion, 250, Victus)", "d": "Não liga após queda de energia, cooler barulhento e dobradiça quebrada."},
+    {"t": "Acer (Aspire, Nitro)", "d": "Superaquecimento, conector de carga e cabo flat da tela."},
+    {"t": "Asus (VivoBook, TUF)", "d": "Placa-mãe após contato com líquido, bateria estufada e teclado."},
+    {"t": "Samsung, Positivo e Vaio", "d": "Troca de tela, teclado e bateria, e upgrade para SSD em modelos mais antigos."}
+  ],
+  "sections": [
+    {"h2": "Seu notebook saiu da garantia do fabricante?", "html": "<p>Depois de 12 meses, o conserto na autorizada costuma ser caro e demorado, porque muitas vezes troca o módulo inteiro. Numa assistência independente, o técnico conserta ou troca só a peça com defeito, com garantia de 90 dias.</p><p>Se o seu notebook ainda está na garantia do fabricante, recomendamos usá-la primeiro: abrir o equipamento fora da autorizada pode anular a cobertura.</p>"},
+    {"h2": "Como informar o modelo certo", "html": "<p>O modelo fica na etiqueta embaixo do notebook (ex.: <em>Inspiron 15 3520</em>, <em>IdeaPad 3 15ITL6</em>, <em>Aspire 5 A515-54</em>). Com ele conseguimos confirmar a peça e o preço antes mesmo de você vir à loja.</p>"}
+  ],
+  "facts": [["Marcas", "Dell, Lenovo, HP, Acer, Asus, Samsung, Apple, Positivo, Vaio, LG"], ["Diagnóstico", "Grátis"], ["Garantia", "90 dias no serviço"], ["Peças", "Originais ou compatíveis testadas"]],
+  "faq": [
+    {"q": "Vocês são assistência autorizada?", "a": "<p>Não. Somos uma assistência técnica independente, especializada em notebooks desde 2001. Atendemos principalmente equipamentos fora da garantia do fabricante.</p>"},
+    {"q": "Atendem notebook gamer?", "a": "<p>Sim: Dell G15, Lenovo Legion, Acer Nitro, Asus TUF, Avell e outros. Os defeitos mais comuns nesses modelos são aquecimento e conector de carga.</p>"},
+    {"q": "Conseguem a peça do meu modelo?", "a": "<p>Para os modelos mais vendidos temos peças em estoque ou encomenda rápida. Informe o modelo pelo WhatsApp e confirmamos disponibilidade e prazo.</p>"}
+  ],
+  "related": ["assistencia-tecnica-de-notebook", "manutencao-de-macbooks", "conserto-de-notebooks"],
+  "form_defeito": ""
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "memoria-para-notebooks",
+  "kind": "peca",
+  "order": 22,
+  "nav_label": "Memória RAM",
+  "card": "Upgrade de memória DDR3, DDR4 e DDR5 com instalação.",
+  "title": "Memória RAM para Notebook com Instalação | Magitronic",
+  "description": "Upgrade de memória RAM para notebook: DDR3, DDR4 e DDR5 compatíveis com o seu modelo, com instalação e teste em Moema, SP. Consulte pelo WhatsApp.",
+  "h1": "Memória RAM para notebook",
+  "lead": "Muitas abas abertas, programas travando e o Windows lento com 4 GB ou 8 GB? Um upgrade de memória compatível resolve, desde que o notebook tenha slot livre ou memória removível.",
+  "image": "memoria-ram",
+  "image_alt": "Pente de memória RAM SODIMM para notebook",
+  "highlights": ["Conferimos slots e limite do seu modelo", "DDR3, DDR4 e DDR5 SODIMM", "Instalação e teste inclusos"],
+  "wa_msg": "Olá! Quero fazer upgrade de memória. Marca/modelo do notebook: ",
+  "symptoms_title": "Quanto de memória você precisa",
+  "symptoms": [
+    {"t": "8 GB", "d": "Uso básico: navegador, e-mail, Office e videochamadas."},
+    {"t": "16 GB", "d": "Recomendado hoje para trabalho com muitas abas, planilhas grandes e multitarefa."},
+    {"t": "32 GB ou mais", "d": "Edição de vídeo, programação pesada, máquinas virtuais e jogos."}
+  ],
+  "sections": [
+    {"h2": "Nem todo notebook aceita upgrade", "html": "<p>Muitos modelos finos têm a memória soldada na placa, total ou parcialmente. Pelo modelo do notebook conferimos quantos slots existem, quanto já está instalado e o máximo suportado, antes de você comprar qualquer coisa.</p>"},
+    {"h2": "Memória e SSD juntos", "html": "<p>Se o notebook ainda usa HD mecânico, o SSD traz um ganho maior que a memória. O ideal é fazer os dois. Veja a <a href=\"/hd-ssd\">troca de HD por SSD</a>.</p>"}
+  ],
+  "facts": [["Tipos", "DDR3, DDR4 e DDR5 SODIMM"], ["Instalação", "Na hora"], ["Garantia", "Conforme o fabricante da memória"], ["Consulta", "Pelo modelo do notebook"]],
+  "faq": [
+    {"q": "Posso misturar memórias diferentes?", "a": "<p>Funciona em muitos casos, mas o ideal são pentes iguais para aproveitar o dual channel. Indicamos a melhor combinação para o seu modelo.</p>"},
+    {"q": "Como saber quanta memória tenho?", "a": "<p>No Windows, abra o Gerenciador de Tarefas → Desempenho → Memória. Lá aparecem o total e os slots em uso.</p>"},
+    {"q": "Upgrade de memória anula a garantia?", "a": "<p>Depende do fabricante. Fora da garantia de fábrica, não há problema.</p>"}
+  ],
+  "related": ["ssd-para-notebooks", "hd-ssd", "manutencao-de-notebooks"],
+  "form_peca": "Memória RAM"
+}

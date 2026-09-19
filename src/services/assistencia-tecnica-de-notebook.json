@@ -1,0 +1,38 @@
+{
+  "slug": "assistencia-tecnica-de-notebook",
+  "kind": "servico",
+  "order": 1,
+  "nav_label": "Assistência técnica de notebook",
+  "card": "Diagnóstico completo e conserto de qualquer defeito, em todas as marcas.",
+  "title": "Assistência Técnica de Notebook em Moema, SP | Magitronic",
+  "description": "Assistência técnica de notebook em Moema desde 2001: diagnóstico grátis, conserto de tela, placa-mãe, teclado e bateria, com 90 dias de garantia.",
+  "h1": "Assistência técnica de notebook em Moema",
+  "lead": "Do notebook que não liga à tela quebrada: fazemos o diagnóstico grátis, explicamos a causa e só consertamos com a sua aprovação.",
+  "image": "bancada-notebook-aberto",
+  "image_alt": "Notebook aberto na bancada com a placa-mãe exposta, ferramentas de precisão e teclas soltas",
+  "highlights": ["Diagnóstico e orçamento grátis", "Garantia de 90 dias no serviço", "Todas as marcas, inclusive MacBook"],
+  "wa_msg": "Olá! Meu notebook está com defeito e quero um orçamento. Marca/modelo: ",
+  "symptoms_title": "Defeitos que resolvemos todos os dias",
+  "symptoms": [
+    {"t": "Não liga ou reinicia sozinho", "d": "Investigamos fonte, conector de carga, bateria e placa-mãe até achar a causa."},
+    {"t": "Tela quebrada ou sem imagem", "d": "Trocamos o painel ou consertamos cabo flat e iluminação quando o painel está bom."},
+    {"t": "Teclado e touchpad", "d": "Troca de tecla, do teclado completo ou do touchpad, com peça do seu modelo."},
+    {"t": "Superaquecimento e lentidão", "d": "Limpeza interna, pasta térmica, troca de cooler e upgrade para SSD."},
+    {"t": "Contato com líquido", "d": "Desmontagem, limpeza e desoxidação da placa. Quanto antes, maior a chance de salvar."},
+    {"t": "Arquivos perdidos", "d": "Recuperação de dados de HD e SSD, com avaliação gratuita."}
+  ],
+  "sections": [
+    {"h2": "Como é o atendimento na Magitronic", "html": "<p>Você traz o notebook à loja em Moema ou conta o problema antes pelo WhatsApp. Na bancada, o técnico testa os componentes um a um: alimentação, placa-mãe, memória, armazenamento, tela e teclado. Assim o orçamento cobre a causa do defeito, não só o sintoma.</p><p>O orçamento vai por escrito, com valor, prazo e o que será trocado. Se não aprovar, você retira o notebook sem pagar nada.</p>"},
+    {"h2": "Manutenção corretiva e preventiva", "html": "<p><strong>Corretiva</strong> é o conserto de algo que já parou: tela, teclado, placa, conector de carga. <strong>Preventiva</strong> é a revisão que evita o próximo defeito: limpeza do sistema de refrigeração, troca da pasta térmica e checagem da saúde do SSD e da bateria.</p><p>Para quem usa o notebook todos os dias, recomendamos a preventiva a cada 12 meses, ou a cada 6 meses em notebooks gamer.</p>"},
+    {"h2": "Peças originais ou compatíveis de qualidade", "html": "<p>Trabalhamos com peças originais e com compatíveis de fornecedores testados. No orçamento informamos qual é a opção e a diferença de preço, para você escolher.</p>"}
+  ],
+  "facts": [["Diagnóstico", "Grátis, sem compromisso"], ["Prazo médio", "1 a 3 dias úteis com peça em estoque"], ["Garantia", "90 dias no serviço e nas peças"], ["Pagamento", "Somente após a sua aprovação"]],
+  "faq": [
+    {"q": "Quanto custa o diagnóstico?", "a": "<p>Nada. O diagnóstico e o orçamento são gratuitos, e você só paga se aprovar o conserto.</p>"},
+    {"q": "Vale a pena consertar um notebook antigo?", "a": "<p>Na maioria dos casos, sim: um SSD e uma limpeza interna fazem notebooks de 5 ou 6 anos voltarem a funcionar bem por uma fração do preço de um novo. Se o conserto não compensar, dizemos isso no orçamento.</p>"},
+    {"q": "Meus arquivos ficam seguros?", "a": "<p>Sim. Não acessamos seus arquivos durante o reparo. Se o serviço exigir formatação, avisamos antes e oferecemos backup.</p>"},
+    {"q": "Vocês atendem empresas?", "a": "<p>Sim. Atendemos empresas e escritórios de Moema e região, com orçamento por equipamento. Fale com a gente pelo WhatsApp.</p>"}
+  ],
+  "related": ["conserto-de-notebooks", "troca-de-tela-de-notebooks", "conserto-de-placa-mae-de-notebooks"],
+  "form_defeito": ""
+}

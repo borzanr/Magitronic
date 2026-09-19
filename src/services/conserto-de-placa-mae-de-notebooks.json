@@ -1,0 +1,35 @@
+{
+  "slug": "conserto-de-placa-mae-de-notebooks",
+  "kind": "servico",
+  "order": 7,
+  "nav_label": "Conserto de placa-mãe",
+  "card": "Curto, chip de vídeo, conector de carga e circuitos de alimentação.",
+  "title": "Conserto de Placa-Mãe de Notebook em São Paulo | Magitronic",
+  "description": "Conserto de placa-mãe de notebook em Moema, SP: curto, conector de carga, chip de vídeo e dano por líquido. Mais barato que trocar a placa inteira.",
+  "h1": "Conserto de placa-mãe de notebook",
+  "lead": "Trocar a placa-mãe inteira costuma custar quase um notebook novo. Consertar o circuito com defeito sai bem mais barato, e é isso que tentamos primeiro.",
+  "image": "tecnico-solda",
+  "image_alt": "Técnico soldando componente na placa-mãe de um notebook",
+  "highlights": ["Reparo do circuito, não só troca", "Conector de carga (DC jack) e USB", "Diagnóstico grátis"],
+  "wa_msg": "Olá! Acho que meu notebook está com defeito na placa-mãe. Marca/modelo: ",
+  "symptoms_title": "Defeitos de placa que consertamos",
+  "symptoms": [
+    {"t": "Curto na alimentação", "d": "Notebook não liga, esquenta parado ou a fonte desarma."},
+    {"t": "Conector de carga", "d": "Só carrega com o cabo numa certa posição, ou não carrega."},
+    {"t": "Vídeo", "d": "Imagem com artefatos, tela preta com o notebook ligado ou falha ao iniciar."},
+    {"t": "Portas USB e HDMI", "d": "Conectores soltos, quebrados ou queimados."},
+    {"t": "Dano por líquido", "d": "Componentes oxidados após contato com água, café ou refrigerante."}
+  ],
+  "sections": [
+    {"h2": "Consertar ou trocar a placa?", "html": "<p>Na bancada, localizamos o componente que falhou com multímetro e fonte de bancada, e fazemos a troca desse componente com estação de solda. Quando o dano é extenso demais, por exemplo depois de muito tempo de oxidação, avisamos no orçamento e cotamos uma placa de reposição.</p>"},
+    {"h2": "O que influencia o preço", "html": "<ul><li>O circuito afetado (alimentação, carga, vídeo).</li><li>A disponibilidade do componente para o seu modelo.</li><li>Se houve líquido, a extensão da oxidação.</li></ul><p>Por isso o valor só é passado depois do diagnóstico, que é gratuito.</p>"}
+  ],
+  "facts": [["Diagnóstico", "Grátis"], ["Prazo médio", "3 a 7 dias úteis"], ["Garantia", "90 dias no reparo"], ["Pagamento", "Somente após aprovação"]],
+  "faq": [
+    {"q": "Placa-mãe queimada tem conserto?", "a": "<p>Muitas vezes, sim. “Queimada” normalmente significa um ou poucos componentes em curto, que podem ser trocados.</p>"},
+    {"q": "Quanto tempo demora?", "a": "<p>Em média de 3 a 7 dias úteis, dependendo do componente. Informamos o prazo no orçamento.</p>"},
+    {"q": "E se não tiver conserto?", "a": "<p>Você não paga nada pelo diagnóstico e decide se quer cotar uma placa nova ou retirar o notebook.</p>"}
+  ],
+  "related": ["conserto-de-notebooks", "reparo-de-notebook", "recuperacao-de-dados"],
+  "form_defeito": "Não liga ou desliga sozinho"
+}

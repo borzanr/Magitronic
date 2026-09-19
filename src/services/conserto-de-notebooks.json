@@ -1,0 +1,36 @@
+{
+  "slug": "conserto-de-notebooks",
+  "kind": "servico",
+  "order": 3,
+  "nav_label": "Notebook não liga",
+  "card": "Não liga, desliga sozinho ou reinicia: encontramos a causa.",
+  "title": "Conserto de Notebook que Não Liga em Moema, SP | Magitronic",
+  "description": "Notebook não liga, desliga sozinho ou não carrega? Diagnóstico grátis de fonte, conector de carga e placa-mãe em Moema, SP. Garantia de 90 dias.",
+  "h1": "Conserto de notebook que não liga",
+  "lead": "Nem sempre é a placa-mãe. Muitas vezes o defeito está no carregador, no conector de carga ou na bateria, com conserto mais simples e barato.",
+  "image": "bancada-notebook-aberto",
+  "image_alt": "Notebook aberto na bancada de conserto com a placa-mãe à mostra",
+  "highlights": ["Teste do carregador incluso", "Diagnóstico grátis", "Conserto de placa quando possível"],
+  "wa_msg": "Olá! Meu notebook não liga. Marca/modelo: ",
+  "symptoms_title": "Qual desses é o seu caso?",
+  "symptoms": [
+    {"t": "Não dá nenhum sinal", "d": "Nem luz de carga acende. Pode ser fonte, conector de carga ou curto na placa."},
+    {"t": "Liga, mas a tela fica preta", "d": "Os LEDs acendem e o cooler gira. Suspeita de memória, tela ou chip de vídeo."},
+    {"t": "Desliga sozinho", "d": "Geralmente superaquecimento ou bateria no fim da vida útil."},
+    {"t": "Só liga na tomada", "d": "Bateria desgastada ou circuito de carga da placa com defeito."},
+    {"t": "Reinicia sem parar", "d": "Pode ser SSD com falha, memória ou sistema corrompido."}
+  ],
+  "sections": [
+    {"h2": "O que fazer antes de trazer", "html": "<ol><li>Teste outra tomada e confira se a luz do carregador acende.</li><li>Desconecte pendrives, mouse e cabos, e segure o botão de ligar por 30 segundos.</li><li>Se o notebook tiver bateria removível, tire-a e tente ligar só na tomada.</li></ol><p>Se nada disso resolver, traga o notebook <strong>com o carregador</strong>: testamos os dois juntos.</p>"},
+    {"h2": "Como diagnosticamos", "html": "<p>Medimos a tensão do carregador, o consumo da placa e a resposta de cada circuito de alimentação. Com isso descobrimos se o defeito é externo (fonte, conector de carga) ou interno (placa, memória, SSD) e passamos um orçamento só do que precisa ser feito.</p>"}
+  ],
+  "facts": [["Diagnóstico", "Grátis, com teste do carregador"], ["Prazo médio", "1 a 5 dias úteis, conforme a causa"], ["Garantia", "90 dias"], ["Leve junto", "O carregador"]],
+  "faq": [
+    {"q": "Notebook não liga tem conserto?", "a": "<p>Na grande maioria dos casos, sim. O importante é descobrir a causa antes de trocar peças.</p>"},
+    {"q": "Pode ser só o carregador?", "a": "<p>Pode, e é uma das causas mais comuns. Por isso testamos o carregador de graça no diagnóstico.</p>"},
+    {"q": "Se for a placa-mãe, compensa?", "a": "<p>Quando dá para consertar o circuito com defeito, costuma custar bem menos que uma placa nova. Se não compensar, dizemos no orçamento. <a href=\"/conserto-de-placa-mae-de-notebooks\">Veja o conserto de placa-mãe</a>.</p>"},
+    {"q": "Vou perder meus arquivos?", "a": "<p>Na maioria das vezes, não: o SSD ou HD costuma estar intacto. Se houver risco, avisamos e fazemos backup antes.</p>"}
+  ],
+  "related": ["conserto-de-placa-mae-de-notebooks", "carregadores-para-notebook", "bateria-para-notebooks"],
+  "form_defeito": "Não liga ou desliga sozinho"
+}

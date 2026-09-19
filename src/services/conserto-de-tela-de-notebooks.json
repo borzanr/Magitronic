@@ -1,0 +1,35 @@
+{
+  "slug": "conserto-de-tela-de-notebooks",
+  "kind": "servico",
+  "order": 9,
+  "nav_label": "Conserto de tela",
+  "card": "Tela piscando, escura, com listras ou sem imagem: nem sempre precisa trocar.",
+  "title": "Conserto de Tela de Notebook Piscando ou Sem Imagem | Magitronic",
+  "description": "Tela do notebook piscando, escura, com listras ou sem imagem? Conserto de cabo flat, iluminação e dobradiça em Moema, SP, muitas vezes sem trocar a tela.",
+  "h1": "Conserto de tela de notebook",
+  "lead": "Quando a tela pisca, escurece ou mostra listras que mudam ao mexer na tampa, o painel geralmente está bom. O defeito costuma estar no cabo flat, na iluminação ou na dobradiça.",
+  "image": "tela-notebook",
+  "image_alt": "Tela de notebook desmontada mostrando o painel e a moldura",
+  "highlights": ["Diagnóstico antes de trocar o painel", "Cabo flat e dobradiças", "Garantia de 90 dias"],
+  "wa_msg": "Olá! A tela do meu notebook está com defeito (piscando / sem imagem / listras). Marca/modelo: ",
+  "symptoms_title": "Sintoma e causa provável",
+  "symptoms": [
+    {"t": "Pisca ao abrir ou fechar a tampa", "d": "Cabo flat gasto na região da dobradiça."},
+    {"t": "Imagem muito escura", "d": "Falha na iluminação (backlight) do painel ou no circuito da placa."},
+    {"t": "Listras que mudam", "d": "Mau contato no conector ou no cabo flat."},
+    {"t": "Sem imagem, mas funciona no monitor externo", "d": "Cabo flat, conector ou o próprio painel."},
+    {"t": "Tampa solta ou rangendo", "d": "Dobradiça quebrada, que força e danifica o cabo com o tempo."}
+  ],
+  "sections": [
+    {"h2": "Um teste simples antes de trazer", "html": "<p>Ligue o notebook num monitor ou TV pelo HDMI. Se a imagem aparecer normalmente no monitor externo, a placa de vídeo está funcionando e o problema está no conjunto da tela. Isso já nos ajuda a passar um orçamento mais preciso.</p>"},
+    {"h2": "Dobradiça quebrada estraga a tela", "html": "<p>Uma dobradiça solta força a tampa a cada abertura e acaba rompendo o cabo flat ou trincando o painel. Trocar a dobradiça cedo evita um conserto bem mais caro depois.</p>"}
+  ],
+  "facts": [["Diagnóstico", "Grátis"], ["Prazo médio", "1 a 3 dias úteis"], ["Garantia", "90 dias"], ["Se precisar trocar", "Veja a troca de tela"]],
+  "faq": [
+    {"q": "Tela piscando tem conserto?", "a": "<p>Na maioria dos casos, sim, e sem trocar o painel: o defeito costuma estar no cabo flat.</p>"},
+    {"q": "Tela preta com o notebook ligado é a tela?", "a": "<p>Nem sempre. Pode ser memória, placa de vídeo ou o próprio painel. O teste com monitor externo ajuda a descobrir.</p>"},
+    {"q": "Vocês trocam dobradiça?", "a": "<p>Sim, e também consertamos as bases de fixação da dobradiça na carcaça quando estão quebradas.</p>"}
+  ],
+  "related": ["troca-de-tela-de-notebooks", "conserto-de-placa-mae-de-notebooks", "reparo-de-notebook"],
+  "form_defeito": "Tela quebrada, piscando ou sem imagem"
+}

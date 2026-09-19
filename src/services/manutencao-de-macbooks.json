@@ -1,0 +1,36 @@
+{
+  "slug": "manutencao-de-macbooks",
+  "kind": "servico",
+  "order": 6,
+  "nav_label": "Manutenção de MacBook",
+  "card": "Bateria, tela, teclado, limpeza e reparo de placa lógica de MacBook.",
+  "title": "Conserto e Manutenção de MacBook em Moema, SP | Magitronic",
+  "description": "Conserto de MacBook Air e Pro em Moema: bateria, tela, teclado, limpeza e desoxidação da placa lógica após líquido. Diagnóstico grátis.",
+  "h1": "Conserto e manutenção de MacBook",
+  "lead": "MacBook Air e MacBook Pro fora da garantia da Apple: trocamos bateria, tela e teclado, e reparamos a placa lógica, inclusive após contato com líquido.",
+  "image": "macbook-aberto",
+  "image_alt": "MacBook aberto com a bateria e a placa lógica expostas durante a manutenção",
+  "highlights": ["MacBook Air e MacBook Pro", "Limpeza e desoxidação da placa lógica", "Diagnóstico grátis"],
+  "wa_msg": "Olá! Quero orçamento para o meu MacBook. Modelo (ex.: A2338): ",
+  "symptoms_title": "Serviços para MacBook",
+  "symptoms": [
+    {"t": "Bateria", "d": "Troca quando o macOS mostra “Manutenção recomendada” ou a bateria estufou."},
+    {"t": "Tela", "d": "Tela trincada, manchas, listras ou o efeito “flexgate” nos modelos 2016–2018."},
+    {"t": "Teclado", "d": "Teclas repetindo ou travando, comum nos teclados borboleta de 2015 a 2019."},
+    {"t": "Líquido na placa lógica", "d": "Limpeza e desoxidação da placa, com troca dos componentes afetados."},
+    {"t": "Limpeza interna", "d": "Remoção de poeira do cooler e dos dissipadores nos modelos com ventoinha."},
+    {"t": "Sistema", "d": "Reinstalação ou atualização do macOS, se você quiser."}
+  ],
+  "sections": [
+    {"h2": "Como identificar o modelo do seu MacBook", "html": "<p>No menu Apple → <em>Sobre Este Mac</em> aparece o ano e o tipo (ex.: <em>MacBook Air M1, 2020</em>). Embaixo do notebook há também um código começando com “A” (ex.: <em>A2338</em>). Com essa informação conferimos a peça e o preço antes da sua visita.</p>"},
+    {"h2": "Como fazemos a manutenção da placa lógica", "html": "<p>A placa é retirada, limpa de toda a poeira e, se houve contato com líquido, passa por um banho químico que remove umidade e oxidação. Depois dos testes, o MacBook é remontado e recebe a limpeza externa.</p>"}
+  ],
+  "facts": [["Modelos", "MacBook Air e MacBook Pro"], ["Diagnóstico", "Grátis"], ["Garantia", "90 dias"], ["Aviso", "Não somos assistência autorizada Apple"]],
+  "faq": [
+    {"q": "Vocês são autorizada Apple?", "a": "<p>Não. Somos uma assistência independente. Se o seu MacBook ainda está na garantia da Apple ou no AppleCare, use-a primeiro.</p>"},
+    {"q": "A bateria substituída é original?", "a": "<p>Trabalhamos com baterias de qualidade equivalente à original e informamos no orçamento a procedência da peça.</p>"},
+    {"q": "MacBook com chip M1, M2 ou M3 tem conserto?", "a": "<p>Sim. Trocamos bateria, tela e teclado, e avaliamos reparos de placa caso a caso.</p>"}
+  ],
+  "related": ["bateria-para-notebooks", "troca-de-tela-de-notebooks", "reparo-de-notebook"],
+  "form_defeito": ""
+}
