@@ -7,7 +7,9 @@ Nova versão do site da [Magitronic](https://www.magitronic.com.br) (assistênci
 - **Homologação — versão C (tech):** https://magitronic.borzanti.com/v3/ — interface escura, ciano e rótulos monoespaçados
 - **Produção (futuro):** https://www.magitronic.com.br
 
-Em homologação todas as páginas têm `noindex`, e a barra do topo permite alternar entre as duas versões.
+Em homologação todas as páginas têm `noindex`, e a barra do topo permite alternar entre as versões.
+
+O site tem **tema claro/escuro**: segue a preferência do sistema e pode ser trocado no botão do cabeçalho, com a escolha guardada no navegador. As regras escuras ficam sob `:root[data-theme="dark"]` no fim de cada folha de estilo. A versão C é escura por natureza e não exibe o botão.
 
 ## Estrutura
 

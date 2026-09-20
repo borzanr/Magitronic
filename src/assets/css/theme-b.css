@@ -189,8 +189,10 @@ body.theme-b .action-bar .ab-wa { color: #fff; }
 }
 
 /* ---------- modo escuro nativo (versão B) ---------- */
-@media (prefers-color-scheme: dark) {
-  body.theme-b {
+/* ---------- tema escuro ----------
+   Aplicado por data-theme no <html>: o script no topo da página escolhe pelo sistema
+   e o botão do cabeçalho permite trocar, guardando a preferência. */
+:root[data-theme="dark"] body.theme-b {
     --blue: #9fb8ff;
     --blue-50: #17223a;
     --blue-100: #22304e;
@@ -202,18 +204,23 @@ body.theme-b .action-bar .ab-wa { color: #fff; }
     --surface: #141c2e;
     --navy: #f2f6ff;
   }
-  body.theme-b .site-header, body.theme-b .info-bar { background: #060d1f; }
-  body.theme-b .page-hero, body.theme-b .page-head,
-  body.theme-b .section:has(> .steps) { background: linear-gradient(180deg, #060d1f 0%, #0b1631 100%); }
-  body.theme-b .proof-band { background: #0b1631; }
-  body.theme-b .facts-box { background: #0b1631; border-color: var(--line); }
-  body.theme-b .hero { background: linear-gradient(120deg, #060d1f 0%, #0b1631 55%, #132449 100%); }
-  body.theme-b .eyebrow, body.theme-b .stars { color: var(--amber); }
-  body.theme-b .btn-primary, body.theme-b .steps li::before { background: var(--amber); color: #23180a; }
-  body.theme-b .btn-primary:hover { background: var(--amber-700); color: #23180a; }
-  body.theme-b .chips li { background: var(--surface); border-color: var(--line); color: var(--ink); }
-  body.theme-b .review { border-top-color: var(--amber); }
-  body.theme-b .quote-bar-title, body.theme-b .hero-card h2 { color: #fff; }
-  body.theme-b .band .lead-form a { color: var(--blue); }
-  body.theme-b .breadcrumb { background: var(--ground); }
-}
+:root[data-theme="dark"] body.theme-b .site-header,
+:root[data-theme="dark"] body.theme-b .info-bar { background: #060d1f; }
+:root[data-theme="dark"] body.theme-b .page-hero,
+:root[data-theme="dark"] body.theme-b .page-head,
+:root[data-theme="dark"] body.theme-b .section:has(> .steps) { background: linear-gradient(180deg, #060d1f 0%, #0b1631 100%); }
+:root[data-theme="dark"] body.theme-b .proof-band { background: #0b1631; }
+:root[data-theme="dark"] body.theme-b .facts-box { background: #0b1631; border-color: var(--line); }
+:root[data-theme="dark"] body.theme-b .hero { background: linear-gradient(120deg, #060d1f 0%, #0b1631 55%, #132449 100%); }
+:root[data-theme="dark"] body.theme-b .eyebrow,
+:root[data-theme="dark"] body.theme-b .stars { color: var(--amber); }
+:root[data-theme="dark"] body.theme-b .btn-primary,
+:root[data-theme="dark"] body.theme-b .steps li::before { background: var(--amber); color: #23180a; }
+:root[data-theme="dark"] body.theme-b .btn-primary:hover { background: var(--amber-700); color: #23180a; }
+:root[data-theme="dark"] body.theme-b .chips li { background: var(--surface); border-color: var(--line); color: var(--ink); }
+:root[data-theme="dark"] body.theme-b .review { border-top-color: var(--amber); }
+:root[data-theme="dark"] body.theme-b .quote-bar-title,
+:root[data-theme="dark"] body.theme-b .hero-card h2 { color: #fff; }
+:root[data-theme="dark"] body.theme-b .band .lead-form a { color: var(--blue); }
+:root[data-theme="dark"] body.theme-b .breadcrumb { background: var(--ground); }
+
