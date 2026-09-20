@@ -83,7 +83,6 @@ body.theme-b .quote-bar { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 body.theme-b .quote-bar-title { color: var(--navy); }
 body.theme-b .hero-card { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 body.theme-b .hero-card h2 { color: var(--navy); }
-body.theme-b .hero-art img { filter: drop-shadow(0 20px 40px rgb(6 13 31 / .2)); }
 
 /* faixa de números */
 body.theme-b .proof-band { background: #0b1631; }

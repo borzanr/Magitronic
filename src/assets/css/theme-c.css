@@ -95,7 +95,6 @@ body.theme-c .slide-badge strong { color: var(--blue); }
 body.theme-c .car-dots button[aria-current="true"] { background: var(--blue); }
 body.theme-c .car-nav { border-color: #23405c; }
 body.theme-c .car-nav:hover { border-color: var(--blue); color: var(--blue); }
-body.theme-c .hero-art img { filter: drop-shadow(0 24px 60px rgb(53 200 240 / .25)); }
 
 body.theme-c .quote-bar { box-shadow: 0 0 0 1px rgb(53 200 240 / .18), 0 20px 50px rgb(0 0 0 / .6); }
 body.theme-c .proof-band {

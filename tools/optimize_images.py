@@ -32,10 +32,11 @@ PHOTOS = {
     "assistencia-dell": ("assistencia-dell-notebook-orcamento.png", 900),
     "tecnico-solda": ("banner-quem-somos.jpg", 1400),
     "circuito": ("banner-principal.jpg", 1600),
+    "notebook-render": ("notebook-render.webp", 900),   # render realista com a marca, usado em "Quem somos"
 }
 
-# ilustração do site atual (fundo transparente) — o dono gosta dela, então entra no topo do site
-ILLUSTRATIONS = {"notebook-ilustracao": ("banner-01.png", 620)}
+# nenhuma ilustração de fundo transparente em uso no momento
+ILLUSTRATIONS: dict[str, tuple[str, int]] = {}
 
 
 def save_webp(im: Image.Image, name: str, max_w: int, quality: int = 74) -> None:
