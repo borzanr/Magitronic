@@ -111,20 +111,27 @@ p { margin: 0; }
 
 /* ---------- barra de informações (topo) ---------- */
 .info-bar { background: var(--navy); color: #c8d4ea; font-size: .84rem; }
-.info-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 8px; }
-.info-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.info-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; padding-block: 8px; }
+.info-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; }
 .info-list li { display: inline-flex; align-items: center; gap: 7px; }
-.info-list .ico { width: 15px; height: 15px; color: var(--blue-100); }
+.info-list .ico { width: 15px; height: 15px; flex: none; color: var(--blue-100); }
 .info-bar a { color: #fff; text-decoration: none; }
 .info-bar a:hover { text-decoration: underline; }
+.info-place { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+.info-place .ico { color: #ffca4a; }
 .info-cta { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .info-cta strong { color: #fff; font-weight: 650; }
-.info-cta a { border: 1px solid rgb(255 255 255 / .35); border-radius: 999px; padding: 3px 12px; }
+.info-cta a { border: 1px solid rgb(255 255 255 / .35); border-radius: 999px; padding: 3px 12px; white-space: nowrap; }
 .info-cta a:hover { background: rgb(255 255 255 / .1); text-decoration: none; }
-@media (max-width: 860px) {
-  .info-list .info-addr { display: none; }
-  .info-row { justify-content: center; gap: 4px 16px; }
+.so-estreito { display: none; }
+@media (max-width: 900px) {
+  /* no celular entram as versões curtas: o endereço continua visível sem ganhar linha */
+  .so-largo { display: none; }
+  .so-estreito { display: inline; }
+  .info-row { justify-content: center; gap: 4px 14px; font-size: .8rem; }
+  .info-list { justify-content: center; gap: 2px 14px; }
   .info-cta strong { display: none; }
+  .info-list .ico { width: 14px; height: 14px; }
 }
 
 /* ---------- cabeçalho ---------- */

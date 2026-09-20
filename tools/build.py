@@ -300,6 +300,18 @@ class Site:
         return (f'<div class="map"><iframe title="{title}" src="{src}" loading="lazy" '
                 f'referrerpolicy="no-referrer-when-downgrade"></iframe></div>')
 
+    def info_address(self) -> str:
+        """Endereço da barra do topo: completo no desktop, curto no celular, sempre com link para o mapa."""
+        a = self.d["address"]
+        longo = f'{a["street"]} — {a["district"]}, {a["state"]}'
+        curto = f'{a["district"]}, {a["city"]}'
+        return (f'<a class="info-place" href="{esc(self.d["maps_url"])}" target="_blank" rel="noopener" data-track="maps">'
+                f'{ICON_PIN}<span class="so-largo">{esc(longo)}</span><span class="so-estreito">{esc(curto)}</span></a>')
+
+    def info_hours(self) -> str:
+        return (f'{ICON_CLOCK}<span class="so-largo">{esc(self.d["hours_display"])}</span>'
+                f'<span class="so-estreito">{esc(self.d["hours_short"])}</span>')
+
     def address_html(self) -> str:
         a = self.d["address"]
         return (f'<address>{esc(a["street"])}<br>{esc(a["district"])} · {esc(a["city"])} – {esc(a["state"])}'
@@ -489,6 +501,10 @@ DEFEITOS = [
 ]
 PECAS = ["Tela", "Teclado", "Bateria", "Carregador / fonte", "Memória RAM", "SSD", "Cooler", "Outra peça"]
 
+ICON_PIN = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 '
+            '5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>')
+ICON_CLOCK = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 '
+              '10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm1-13h-2v6l5 3 1-1.7-4-2.3Z"/></svg>')
 ICON_WA = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 '
            '15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c'
            '-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8'
@@ -526,6 +542,8 @@ COMPONENTS = {
     "phone_link": lambda s, a: s.phone_link(a),
     "phone_href": lambda s, a: f"tel:{s.d['phone_e164']}",
     "address": lambda s, a: s.address_html(),
+    "info_address": lambda s, a: s.info_address(),
+    "info_hours": lambda s, a: s.info_hours(),
     "hours": lambda s, a: esc(s.d["hours_display"]),
     "brands": lambda s, a: s.brand_chips(),
     "reviews": lambda s, a: s.reviews(),

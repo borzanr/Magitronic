@@ -22,18 +22,56 @@
     "lng": -46.6957409
   },
   "hours_display": "Segunda a sexta, das 9h às 18h",
-  "hours_schema": [{"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}],
+  "hours_short": "Seg a sex, 9h–18h",
+  "hours_schema": [
+    {
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
   "maps_url": "https://www.google.com/maps/search/?api=1&query=Magitronic+Alameda+dos+Maracatins+508+Moema+S%C3%A3o+Paulo",
   "maps_embed": "https://www.google.com/maps?q=Alameda+dos+Maracatins,+508,+Moema,+S%C3%A3o+Paulo+-+SP&output=embed",
   "reviews_url": "https://www.google.com/maps/search/?api=1&query=Magitronic+Assist%C3%AAncia+T%C3%A9cnica+Notebooks+Moema",
   "instagram": "https://www.instagram.com/magitronicnotebooks/",
   "web3forms_key": "",
   "gtm_id": "",
-  "brands": ["Dell", "Lenovo", "HP", "Acer", "Asus", "Samsung", "Apple MacBook", "Positivo", "Vaio", "LG", "Avell", "Multilaser"],
+  "brands": [
+    "Dell",
+    "Lenovo",
+    "HP",
+    "Acer",
+    "Asus",
+    "Samsung",
+    "Apple MacBook",
+    "Positivo",
+    "Vaio",
+    "LG",
+    "Avell",
+    "Multilaser"
+  ],
   "reviews": [
-    {"name": "Kézia Gonçalves", "text": "Ótimo atendimento. Mauro foi super gentil e sincero com o diagnóstico do meu notebook. Ficou pronto em 2 dias. Super recomendo."},
-    {"name": "Bruno Vícola", "text": "Já sou cliente há alguns anos e recomendo muito! Super cordiais, preços justos, atendimento impecável, serviço excelente e muito qualificado!"},
-    {"name": "Victor Schaefer", "text": "Tive que fazer uma troca simples de uma tecla do notebook que estava quebrada, e eles nem cobraram nada pelo serviço! Recomendo!"},
-    {"name": "Vitu", "text": "Excelente assistência, recomendo a todos! Resolveram meu problema super rápido e foram super educados comigo, com certeza recomendaria pra qualquer pessoa sem pensar 2 vezes."}
+    {
+      "name": "Kézia Gonçalves",
+      "text": "Ótimo atendimento. Mauro foi super gentil e sincero com o diagnóstico do meu notebook. Ficou pronto em 2 dias. Super recomendo."
+    },
+    {
+      "name": "Bruno Vícola",
+      "text": "Já sou cliente há alguns anos e recomendo muito! Super cordiais, preços justos, atendimento impecável, serviço excelente e muito qualificado!"
+    },
+    {
+      "name": "Victor Schaefer",
+      "text": "Tive que fazer uma troca simples de uma tecla do notebook que estava quebrada, e eles nem cobraram nada pelo serviço! Recomendo!"
+    },
+    {
+      "name": "Vitu",
+      "text": "Excelente assistência, recomendo a todos! Resolveram meu problema super rápido e foram super educados comigo, com certeza recomendaria pra qualquer pessoa sem pensar 2 vezes."
+    }
   ]
 }
