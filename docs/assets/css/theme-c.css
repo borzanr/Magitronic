@@ -68,30 +68,6 @@ body.theme-c .dir-list a { color: var(--ink-2); }
 body.theme-c .dir-list a:hover { background: var(--blue-50); color: var(--blue); }
 
 /* mesma declaração da base: esta versão já é escura e deve continuar como foi desenhada */
-/* ---------- tema escuro ----------
-   Aplicado por data-theme no <html>: o script no topo da página escolhe pelo sistema
-   e o botão do cabeçalho permite trocar, guardando a preferência. */
-:root[data-theme="dark"] body.theme-c { background: var(--ground); color: var(--ink); }
-:root[data-theme="dark"] body.theme-c .site-header { background-color: rgb(5 8 15 / .86); }
-:root[data-theme="dark"] body.theme-c .card-link,
-:root[data-theme="dark"] body.theme-c .symptoms li,
-:root[data-theme="dark"] body.theme-c .symptom-links a,
-:root[data-theme="dark"] body.theme-c .steps li,
-:root[data-theme="dark"] body.theme-c .review,
-:root[data-theme="dark"] body.theme-c .faq details,
-:root[data-theme="dark"] body.theme-c .panel,
-:root[data-theme="dark"] body.theme-c .contact-list li,
-:root[data-theme="dark"] body.theme-c .quote-bar,
-:root[data-theme="dark"] body.theme-c .facts-box { background-color: var(--surface); }
-:root[data-theme="dark"] body.theme-c h1,
-:root[data-theme="dark"] body.theme-c h2,
-:root[data-theme="dark"] body.theme-c h3 { color: #fff; }
-:root[data-theme="dark"] body.theme-c .field input[type="text"],
-:root[data-theme="dark"] body.theme-c .field input[type="tel"],
-:root[data-theme="dark"] body.theme-c .field input[type="email"],
-:root[data-theme="dark"] body.theme-c .field select,
-:root[data-theme="dark"] body.theme-c .field textarea { background-color: #0a111e; color: var(--ink); }
-
 
 /* ---------- barra de informações ---------- */
 body.theme-c .info-bar { background: #03060d; border-bottom: 1px solid var(--line); color: var(--ink-2); font-family: var(--mono); font-size: .76rem; }

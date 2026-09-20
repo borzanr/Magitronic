@@ -495,10 +495,7 @@ class Site:
                 f'<li><a href="/{s["slug"]}"{" aria-current=\"page\"" if path == "/" + s["slug"] else ""}>'
                 f'{esc(s["nav_label"])}</a></li>'
                 for s in self.services if s["kind"] == kind)
-        # a versão C é escura por natureza: não faz sentido oferecer a troca lá
-        botao = "" if self.theme == "c" else BOTAO_TEMA
         return (self.templates["header"]
-                .replace("[[theme_toggle]]", botao)
                 .replace("[[logo_svg]]", self.logo_svg)
                 .replace("[[nav_consertos]]", links("servico"))
                 .replace("[[nav_pecas]]", links("peca")))
@@ -524,8 +521,6 @@ DEFEITOS = [
     "Outro",
 ]
 PECAS = ["Tela", "Teclado", "Bateria", "Carregador / fonte", "Memória RAM", "SSD", "Cooler", "Outra peça"]
-
-BOTAO_TEMA = ('<button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema claro e escuro"><svg class="ico ico-sol" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-13.2a1 1 0 0 1-1-1V2a1 1 0 0 1 2 0v.8a1 1 0 0 1-1 1Zm0 18.4a1 1 0 0 1-1-1V21a1 1 0 0 1 2 0v.2a1 1 0 0 1-1 1ZM4.2 5.6a1 1 0 0 1 0-1.4 1 1 0 0 1 1.4 0l.6.6a1 1 0 0 1-1.4 1.4ZM18.4 19.8l-.6-.6a1 1 0 0 1 1.4-1.4l.6.6a1 1 0 0 1-1.4 1.4ZM3 13H2a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2Zm19 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM5.6 19.8a1 1 0 0 1-1.4-1.4l.6-.6a1 1 0 1 1 1.4 1.4ZM19.8 5.6l-.6.6a1 1 0 0 1-1.4-1.4l.6-.6a1 1 0 0 1 1.4 1.4Z"/></svg><svg class="ico ico-lua" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 13.3A9 9 0 0 1 10.7 3a9 9 0 1 0 10.3 10.3Z"/></svg></button>')
 
 ICON_PIN = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 '
             '5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>')

@@ -42,26 +42,6 @@
     });
   });
 
-  // ---------- alternância de tema ----------
-  var botaoTema = document.querySelector('[data-theme-toggle]');
-  if (botaoTema) {
-    var raiz = document.documentElement;
-    var rotula = function () {
-      var escuro = raiz.getAttribute('data-theme') === 'dark';
-      botaoTema.setAttribute('aria-label', escuro ? 'Mudar para o tema claro' : 'Mudar para o tema escuro');
-      botaoTema.setAttribute('title', botaoTema.getAttribute('aria-label'));
-    };
-    rotula();
-    botaoTema.addEventListener('click', function () {
-      var novo = raiz.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      raiz.setAttribute('data-theme', novo);
-      raiz.style.colorScheme = novo;
-      try { localStorage.setItem('mg-tema', novo); } catch (e) {}
-      rotula();
-      track('theme_toggle', { theme: novo });
-    });
-  }
-
   // ---------- medição de cliques (WhatsApp e telefone) ----------
   document.addEventListener('click', function (e) {
     var a = e.target.closest('[data-track]');

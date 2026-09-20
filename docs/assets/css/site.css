@@ -110,7 +110,6 @@ p { margin: 0; }
 .demo-switch a:hover { background: #fff; }
 .demo-switch a.atual { background: #5c4300; color: #fff4d6; border-color: #5c4300; }
 
-
 /* ---------- barra de informações (topo) ---------- */
 .info-bar { background: var(--navy); color: #c8d4ea; font-size: .84rem; }
 .info-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; padding-block: 8px; }
@@ -143,7 +142,7 @@ p { margin: 0; }
 .logo svg { width: 164px; height: auto; display: block; }
 .logo img { width: 164px; height: auto; }
 .menu-toggle {
-  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px;
+  margin-left: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px;
   border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font: inherit; font-weight: 600; color: var(--navy); cursor: pointer;
 }
 .menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px; position: relative; transition: transform .2s; }
@@ -153,16 +152,6 @@ p { margin: 0; }
 .menu-toggle[aria-expanded="true"] .menu-icon::before { transform: translateY(6px) rotate(45deg); }
 .menu-toggle[aria-expanded="true"] .menu-icon::after { transform: translateY(-6px) rotate(-45deg); }
 
-.theme-toggle {
-  margin-left: auto; display: inline-grid; place-items: center; width: 44px; height: 44px;
-  border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--navy); cursor: pointer;
-}
-.theme-toggle:hover { border-color: var(--blue); color: var(--blue); }
-.theme-toggle .ico { width: 20px; height: 20px; }
-.ico-sol { display: none; }
-:root[data-theme="dark"] .ico-sol { display: block; }
-:root[data-theme="dark"] .ico-lua { display: none; }
-.menu-toggle { margin-left: 8px; }
 
 .nav { display: none; }
 .nav.open {
@@ -191,8 +180,6 @@ p { margin: 0; }
 
 @media (min-width: 1100px) {
   .menu-toggle { display: none; }
-  .theme-toggle { order: 3; margin-left: 14px; }
-  .nav, .nav.open { order: 2; }
   .nav, .nav.open { display: flex; align-items: center; gap: 20px; margin-left: auto; position: static; box-shadow: none; border: 0; padding: 0; max-height: none; overflow: visible; background: none; }
   .nav-list { display: flex; gap: 2px; }
   .nav-list > li { position: relative; }
@@ -569,71 +556,3 @@ p { margin: 0; }
    Samsung Internet e o Chrome no Android aplicam um escurecimento automático que inverte cores
    e escurece as fotos. Fica no fim do arquivo de propósito, para prevalecer sobre as regras acima.
    O token --navy vira cor de texto clara, e as faixas que o usavam como fundo recebem cor própria. */
-/* ---------- tema escuro ----------
-   Aplicado por data-theme no <html>: o script no topo da página escolhe pelo sistema
-   e o botão do cabeçalho permite trocar, guardando a preferência. */
-:root[data-theme="dark"] {
-    color-scheme: dark;
-    --blue: #8fb2ff;
-    --blue-700: #b9ccff;
-    --blue-50: #17223a;
-    --blue-100: #22304e;
-    --navy: #f2f6ff;
-    --navy-800: #0f1728;
-    --ink: #e8eef8;
-    --ink-2: #aab7cd;
-    --ink-3: #93a0b8;
-    --line: #253149;
-    --ground: #0d1220;
-    --surface: #141c2e;
-    --shadow: 0 1px 2px rgb(0 0 0 / .4), 0 10px 30px rgb(0 0 0 / .35);
-  }
-/* faixas que usavam o azul-noite como fundo */
-:root[data-theme="dark"] .info-bar,
-:root[data-theme="dark"] .proof-band,
-:root[data-theme="dark"] .band,
-:root[data-theme="dark"] .site-footer,
-:root[data-theme="dark"] .skip { background: #070c17; }
-:root[data-theme="dark"] .cta-box { background: linear-gradient(120deg, #16255a, #0b1222); border: 1px solid var(--line); }
-:root[data-theme="dark"] .site-header { background: var(--surface); }
-:root[data-theme="dark"] .theme-toggle { background: var(--surface); border-color: var(--line); color: var(--ink); }
-:root[data-theme="dark"] .logo { color: #fff; }
-/* textos e superfícies */
-:root[data-theme="dark"] .prose p,
-:root[data-theme="dark"] .prose li { color: var(--ink-2); }
-:root[data-theme="dark"] .prose strong,
-:root[data-theme="dark"] h1,
-:root[data-theme="dark"] h2,
-:root[data-theme="dark"] h3,
-:root[data-theme="dark"] .h3,
-:root[data-theme="dark"] .h4 { color: #fff; }
-:root[data-theme="dark"] .field input[type="text"],
-:root[data-theme="dark"] .field input[type="tel"],
-:root[data-theme="dark"] .field input[type="email"],
-:root[data-theme="dark"] .field select,
-:root[data-theme="dark"] .field textarea { background: #0f1728; border-color: #2c3a55; color: var(--ink); }
-:root[data-theme="dark"] .field input::placeholder,
-:root[data-theme="dark"] .field textarea::placeholder { color: #8390a8; }
-:root[data-theme="dark"] .chips li { background: var(--surface); border-color: var(--line); color: var(--ink); }
-/* topo da home: sem a textura clara de circuito */
-:root[data-theme="dark"] .hero { background: linear-gradient(180deg, #0b101c, var(--ground)); }
-:root[data-theme="dark"] .hero::before { display: none; }
-/* o azul claro é para texto; botões recebem um azul profundo */
-:root[data-theme="dark"] .btn-primary,
-:root[data-theme="dark"] .steps li::before { background: #2a54d8; color: #fff; }
-:root[data-theme="dark"] .btn-primary:hover { background: #3a63e4; color: #fff; }
-:root[data-theme="dark"] .btn-ghost { color: var(--blue); border-color: #2f3f5e; }
-:root[data-theme="dark"] .btn-ghost:hover { border-color: var(--blue); color: #fff; }
-/* elementos que eram claros por natureza */
-:root[data-theme="dark"] .demo-bar { background: #33290d; color: #ffe4a3; border-bottom-color: #4a3b12; }
-:root[data-theme="dark"] .demo-switch a { background: #241d08; border-color: #5c4a18; color: #ffe4a3; }
-:root[data-theme="dark"] .demo-switch a.atual { background: #ffd98a; color: #33290d; border-color: #ffd98a; }
-:root[data-theme="dark"] .map,
-:root[data-theme="dark"] .map-load { background:
-      linear-gradient(90deg, rgb(143 178 255 / .08) 1px, transparent 1px) 0 0 / 32px 32px,
-      linear-gradient(rgb(143 178 255 / .08) 1px, transparent 1px) 0 0 / 32px 32px,
-      var(--surface); }
-:root[data-theme="dark"] .prose th { background: var(--blue-50); color: #fff; }
-:root[data-theme="dark"] .action-bar { background: var(--surface); }
-:root[data-theme="dark"] .stars { color: #ffc247; }
-
