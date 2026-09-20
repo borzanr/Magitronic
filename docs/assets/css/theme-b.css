@@ -70,33 +70,23 @@ body.theme-b .sub a:hover { color: var(--amber); }
 body.theme-b .sub-title { color: var(--amber); }
 body.theme-b .sub-all a { color: #fff; }
 
-/* ---------- topo escuro com a ilustração ---------- */
-body.theme-b .hero {
-  background: linear-gradient(120deg, #060d1f 0%, #0b1631 55%, #132449 100%);
-  border-bottom: 0;
-}
-body.theme-b .hero::before {
-  background-image: url("/assets/img/circuito.webp");
-  filter: invert(1);
-  opacity: .10;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-}
-body.theme-b .hero h1 { color: #fff; }
-body.theme-b .hero h1 span { color: var(--amber); }
-body.theme-b .hero .lead { color: #c3cfe8; font-size: 1.2rem; }
-body.theme-b .hero .eyebrow { color: var(--amber); }
-body.theme-b .hero .ticks li { color: #e8edf9; }
-body.theme-b .hero .ticks li::before { border-color: var(--amber); }
-body.theme-b .hero-art img { filter: drop-shadow(0 20px 40px rgb(6 13 31 / .2)); }
-body.theme-b .hero-media { box-shadow: 0 30px 70px rgb(0 0 0 / .55); border: 1px solid #22314f; }
+/* ---------- carrossel do topo ---------- */
+body.theme-b .hero { background: var(--navy); border-bottom: 4px solid var(--amber); }
+body.theme-b .slide-copy .eyebrow { color: var(--amber); }
+body.theme-b .slide-copy .eyebrow::before { background: var(--amber); }
+body.theme-b .slide-copy h1 span { color: var(--amber); }
+body.theme-b .slide-copy .ticks li::before { border-color: var(--amber); }
+body.theme-b .slide-badge strong { color: var(--amber); }
+body.theme-b .car-dots button[aria-current="true"] { background: var(--amber); }
+body.theme-b .car-nav:hover { border-color: var(--amber); color: var(--amber); }
 body.theme-b .quote-bar { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 body.theme-b .quote-bar-title { color: var(--navy); }
 body.theme-b .hero-card { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 body.theme-b .hero-card h2 { color: var(--navy); }
+body.theme-b .hero-art img { filter: drop-shadow(0 20px 40px rgb(6 13 31 / .2)); }
 
 /* faixa de números */
-body.theme-b .proof-band { background: #0b1631; border-top: 4px solid var(--amber); }
+body.theme-b .proof-band { background: #0b1631; }
 body.theme-b .proof dd { color: var(--amber); }
 body.theme-b .proof dt { color: #9fb0d0; }
 

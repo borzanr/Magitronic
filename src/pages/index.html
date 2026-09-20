@@ -7,25 +7,69 @@ priority: 1.0
 preload: tecnico-solda
 ---
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow">Assistência técnica de notebooks · Moema, SP</p>
-      <h1>Conserto de notebook com <span>diagnóstico grátis</span></h1>
-      <p class="lead">Tela, placa-mãe, teclado, bateria e recuperação de dados para todas as marcas, inclusive MacBook. Desde 2001 em Moema, São Paulo.</p>
-      <ul class="ticks">
-        <li>Orçamento por escrito antes de qualquer reparo</li>
-        <li>Você só paga se aprovar</li>
-        <li>90 dias de garantia no serviço</li>
-      </ul>
-      <div class="actions">
-        {{wa_button}}
-        <a class="btn btn-ghost" href="/orcamento">Pedir orçamento</a>
-      </div>
+  <div class="hero-carousel" data-carousel data-interval="10000" aria-roledescription="carrossel" aria-label="Destaques da Magitronic">
+    <div class="slides">
+
+      <article class="slide is-active" aria-roledescription="quadro" aria-label="1 de 3">
+        {{img_hero:tecnico-solda|Técnico da Magitronic reparando a placa de um notebook na bancada}}
+        <div class="slide-copy">
+          <div class="wrap">
+            <p class="eyebrow">Assistência técnica de notebooks · Moema, SP</p>
+            <h1>Conserto de notebook com <span>diagnóstico grátis</span></h1>
+            <p class="lead">Tela, placa-mãe, teclado, bateria e recuperação de dados para todas as marcas, inclusive MacBook.</p>
+            <ul class="ticks hero-only-desktop">
+              <li>Orçamento por escrito antes de qualquer reparo</li>
+              <li>Você só paga se aprovar</li>
+              <li>90 dias de garantia no serviço</li>
+            </ul>
+            <div class="actions hero-only-desktop">
+              {{wa_button}}
+              <a class="btn btn-ghost" href="/orcamento">Pedir orçamento</a>
+            </div>
+            <p class="slide-badge"><strong>+50 mil</strong> notebooks atendidos desde 2001</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" aria-roledescription="quadro" aria-label="2 de 3" aria-hidden="true">
+        {{img:reparo-hd|Técnico com luvas manipulando um HD aberto em laboratório}}
+        <div class="slide-copy">
+          <div class="wrap">
+            <p class="eyebrow">Recuperação de dados</p>
+            <h2>Perdeu fotos e arquivos? A avaliação é grátis</h2>
+            <p class="lead">HD, SSD, pendrive e cartão. Você recebe o relatório do que dá para recuperar e, se não for possível, não paga nada.</p>
+            <div class="actions hero-only-desktop">
+              <a class="btn btn-primary" href="/recuperacao-de-dados">Ver recuperação de dados</a>
+            </div>
+            <p class="slide-badge"><strong>Sem custo</strong> se não for possível recuperar</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" aria-roledescription="quadro" aria-label="3 de 3" aria-hidden="true">
+        {{img:teclado-desmontado|Teclados de notebook prontos para instalação}}
+        <div class="slide-copy">
+          <div class="wrap">
+            <p class="eyebrow">Peças com instalação</p>
+            <h2>Tela, bateria, teclado e SSD para o seu modelo</h2>
+            <p class="lead">Confirmamos a peça certa pelo modelo do notebook e instalamos na loja, com 90 dias de garantia.</p>
+            <div class="actions hero-only-desktop">
+              <a class="btn btn-primary" href="/pecas-para-notebook">Ver peças</a>
+            </div>
+            <p class="slide-badge"><strong>Consulta</strong> de disponibilidade pelo WhatsApp</p>
+          </div>
+        </div>
+      </article>
+
     </div>
-    <figure class="hero-media">
-      {{img_hero:tecnico-solda|Técnico da Magitronic reparando a placa de um notebook na bancada}}
-      <figcaption class="hero-badge"><strong>+50 mil</strong> notebooks atendidos desde 2001</figcaption>
-    </figure>
+
+    <button class="car-nav car-prev" type="button" aria-label="Quadro anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>
+    </button>
+    <button class="car-nav car-next" type="button" aria-label="Próximo quadro">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+    </button>
+    <div class="car-dots" role="group" aria-label="Escolher quadro"></div>
   </div>
 
   <div class="wrap quote-bar">

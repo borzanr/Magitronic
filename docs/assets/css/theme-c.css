@@ -82,24 +82,20 @@ body.theme-c .sub, body.theme-c .sub.open { background: #0a1220; border-color: v
 body.theme-c .sub a { color: var(--ink-2); }
 body.theme-c .sub a:hover { color: var(--blue); }
 
-body.theme-c .hero {
-  background: transparent;
-  border-bottom: 1px solid var(--line);
+body.theme-c .hero { background: var(--navy); border-bottom: 1px solid var(--line); }
+body.theme-c .slide-copy { background: linear-gradient(180deg, rgb(5 8 15 / .45) 0%, rgb(5 8 15 / .85) 55%, rgb(5 8 15 / .96) 100%); }
+@media (min-width: 900px) {
+  body.theme-c .slide-copy { background: linear-gradient(90deg, rgb(5 8 15 / .96) 0%, rgb(5 8 15 / .86) 45%, rgb(5 8 15 / .3) 100%); }
 }
-body.theme-c .hero::before {
-  background-image:
-    linear-gradient(90deg, rgb(53 200 240 / .10) 1px, transparent 1px),
-    linear-gradient(rgb(53 200 240 / .10) 1px, transparent 1px);
-  background-size: 48px 48px, 48px 48px;
-  background-position: center;
-  opacity: 1;
-  mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 100%);
-  -webkit-mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 100%);
-}
-body.theme-c .hero h1 span { color: var(--blue); text-shadow: 0 0 28px rgb(53 200 240 / .45); }
+body.theme-c .slide-copy .eyebrow { color: var(--blue); }
+body.theme-c .slide-copy h1 span { color: var(--blue); text-shadow: 0 0 28px rgb(53 200 240 / .45); }
+body.theme-c .slide-copy .ticks li::before { border-color: var(--blue); }
+body.theme-c .slide-badge { border-top-color: rgb(53 200 240 / .35); }
+body.theme-c .slide-badge strong { color: var(--blue); }
+body.theme-c .car-dots button[aria-current="true"] { background: var(--blue); }
+body.theme-c .car-nav { border-color: #23405c; }
+body.theme-c .car-nav:hover { border-color: var(--blue); color: var(--blue); }
 body.theme-c .hero-art img { filter: drop-shadow(0 24px 60px rgb(53 200 240 / .25)); }
-body.theme-c .hero-media { border: 1px solid var(--line); box-shadow: 0 0 0 1px rgb(53 200 240 / .12), 0 30px 70px rgb(0 0 0 / .6); }
-body.theme-c .ticks li::before { border-color: var(--blue); }
 
 body.theme-c .quote-bar { box-shadow: 0 0 0 1px rgb(53 200 240 / .18), 0 20px 50px rgb(0 0 0 / .6); }
 body.theme-c .proof-band {

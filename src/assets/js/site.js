@@ -209,6 +209,85 @@
     } catch (e) {}
   }
 
+  // ---------- carrossel do topo ----------
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var slides = [].slice.call(car.querySelectorAll('.slide'));
+    if (slides.length < 2) return;
+    var dotsBox = car.querySelector('.car-dots');
+    var interval = parseInt(car.getAttribute('data-interval'), 10) || 10000;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var index = 0;
+    var timer = null;
+    var dots = slides.map(function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Ir para o quadro ' + (i + 1));
+      b.addEventListener('click', function () { go(i); restart(); });
+      if (dotsBox) dotsBox.appendChild(b);
+      return b;
+    });
+
+    function go(i) {
+      index = (i + slides.length) % slides.length;
+      slides.forEach(function (s, n) {
+        var on = n === index;
+        s.classList.toggle('is-active', on);
+        if (on) s.removeAttribute('aria-hidden'); else s.setAttribute('aria-hidden', 'true');
+        s.querySelectorAll('a, button').forEach(function (el) {
+          if (on) el.removeAttribute('tabindex'); else el.setAttribute('tabindex', '-1');
+        });
+      });
+      dots.forEach(function (d, n) {
+        if (n === index) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
+      });
+    }
+    function next() { go(index + 1); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() {
+      if (reduce || document.hidden) return;
+      stop();
+      timer = setInterval(next, interval);
+    }
+    function restart() { stop(); start(); }
+
+    car.querySelector('.car-next').addEventListener('click', function () { next(); restart(); });
+    car.querySelector('.car-prev').addEventListener('click', function () { go(index - 1); restart(); });
+
+    // clique no quadro (fora de links e botões) avança
+    car.addEventListener('click', function (e) {
+      if (e.target.closest('a, button')) return;
+      next();
+      restart();
+    });
+
+    // pausa enquanto a pessoa interage ou a aba está em segundo plano
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', start);
+    car.addEventListener('focusin', stop);
+    car.addEventListener('focusout', start);
+    document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
+
+    // arrastar no celular
+    var x0 = null;
+    car.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    car.addEventListener('touchend', function (e) {
+      if (x0 !== null) {
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) { go(index + (dx < 0 ? 1 : -1)); }
+      }
+      x0 = null;
+      start();
+    });
+
+    car.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { next(); restart(); }
+      if (e.key === 'ArrowLeft') { go(index - 1); restart(); }
+    });
+
+    go(0);
+    start();
+  });
+
   // ---------- mapa sob demanda ----------
   document.querySelectorAll('.map-load').forEach(function (btn) {
     btn.addEventListener('click', function () {
