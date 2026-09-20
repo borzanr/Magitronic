@@ -290,12 +290,9 @@ class Site:
         original na versão C, onde a transparência não funciona (o render é claro)."""
         alt = ("Notebook aberto com telas de diagnóstico, engrenagens, escudo e nuvem flutuando ao "
                "redor, e a placa com a marca Magitronic")
-        if self.theme == "c":
-            return f'<figure class="figure-frame">{self.img("notebook-render-fundo", alt)}</figure>'
-        # o recorte só funciona sobre fundo claro; no modo escuro entra o render com o fundo original
-        return ('<figure class="figure-frame"><picture>'
-                '<source srcset="/assets/img/notebook-render-fundo.webp" media="(prefers-color-scheme: dark)">'
-                f'{self.img("notebook-render", alt)}</picture></figure>')
+        # sempre a versão com fundo próprio: o recorte depende de um fundo claro, e navegadores
+        # com modo escuro automático escurecem o fundo da página sem avisar a folha de estilo
+        return f'<figure class="figure-frame">{self.img("notebook-render-fundo", alt)}</figure>' 
 
     def map_block(self, facade: bool = False) -> str:
         """Mapa do Google. Com facade=True o iframe (~1 MB de scripts) só carrega quando a pessoa clica."""
@@ -484,6 +481,14 @@ class Site:
                 .replace("[[switch]]", links)
                 .replace("[[atual]]", self.theme.upper()))
 
+    @property
+    def logo_svg(self) -> str:
+        """Logotipo em vetor, embutido na página: herda a cor do texto (currentColor), então
+        continua legível também nos navegadores que escurecem a página por conta própria."""
+        if not hasattr(self, "_logo"):
+            self._logo = read(SRC / "assets" / "img" / "logo-magitronic.svg")
+        return self._logo
+
     def header(self, path: str) -> str:
         def links(kind: str) -> str:
             return "".join(
@@ -491,6 +496,7 @@ class Site:
                 f'{esc(s["nav_label"])}</a></li>'
                 for s in self.services if s["kind"] == kind)
         return (self.templates["header"]
+                .replace("[[logo_svg]]", self.logo_svg)
                 .replace("[[nav_consertos]]", links("servico"))
                 .replace("[[nav_pecas]]", links("peca")))
 

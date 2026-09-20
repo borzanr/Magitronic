@@ -139,6 +139,8 @@ p { margin: 0; }
 /* ---------- cabeçalho ---------- */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
 .header-row { display: flex; align-items: center; gap: 16px; min-height: 72px; }
+.logo { display: inline-flex; color: var(--navy); }
+.logo svg { width: 164px; height: auto; display: block; }
 .logo img { width: 164px; height: auto; }
 .menu-toggle {
   margin-left: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px;
@@ -574,6 +576,7 @@ p { margin: 0; }
   .info-bar, .proof-band, .band, .site-footer, .skip { background: #070c17; }
   .cta-box { background: linear-gradient(120deg, #16255a, #0b1222); border: 1px solid var(--line); }
   .site-header { background: var(--surface); }
+  .logo { color: #fff; }
 
   /* textos e superfícies */
   .prose p, .prose li { color: var(--ink-2); }

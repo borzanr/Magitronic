@@ -57,10 +57,7 @@ body.theme-b .info-cta a:hover { background: var(--amber); color: #23180a; }
 
 /* ---------- cabeçalho escuro ---------- */
 body.theme-b .site-header { background: var(--navy); border-bottom: 1px solid #1b2947; }
-@media (prefers-color-scheme: light) {
-  /* no claro é servida a imagem azul e este cabeçalho é escuro: clareia por filtro */
-  body.theme-b .logo img { filter: brightness(0) invert(1); }
-}
+body.theme-b .logo { color: #fff; }   /* cabeçalho escuro nas duas condições */
 body.theme-b .nav-list > li > a, body.theme-b .sub-toggle, body.theme-b .nav-phone { color: #e8edf9; }
 body.theme-b .menu-toggle { background: transparent; color: #fff; border-color: #2b3a5e; }
 body.theme-b .nav.open { background: var(--navy); border-bottom-color: #1b2947; }
