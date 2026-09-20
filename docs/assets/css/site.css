@@ -110,6 +110,25 @@ p { margin: 0; }
 .demo-switch a:hover { background: #fff; }
 .demo-switch a.atual { background: #5c4300; color: #fff4d6; border-color: #5c4300; }
 
+/* Navegadores com escurecimento automático (Samsung Internet, Chrome no Android) só respeitam
+   o desenho da página quando ela declara ter aparência própria no tema escuro. Declaramos aqui,
+   mantendo a mesma paleta clara: o site continua claro, sem inversão de cores.
+   Ao alterar os tokens no :root acima, não é preciso mexer aqui: as cores vêm das variáveis. */
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: only light; }
+  body { background: var(--ground); color: var(--ink); }
+  .site-header, .nav.open, .sub, .card-link, .symptoms li, .symptom-links a, .steps li, .review,
+  .faq details, .panel, .contact-list li, .quote-bar, .hero-card, .chips li, .table-scroll,
+  .consent, .action-bar, .map, .facts-box { background-color: var(--surface); color: var(--ink); }
+  .field input[type="text"], .field input[type="tel"], .field input[type="email"],
+  .field select, .field textarea { background-color: #fff; color: var(--ink); }
+  h1, h2, h3, .h3, .h4, .card-title, .quote-bar-title { color: var(--navy); }
+  .lead, .card-text, .hint, .section-head p { color: var(--ink-2); }
+  .info-bar, .proof-band, .site-footer, .band { background-color: var(--navy); }
+  .cta-box { background-color: var(--blue); }
+  .demo-bar { background-color: #fff4d6; color: #5c4300; }
+}
+
 /* ---------- barra de informações (topo) ---------- */
 .info-bar { background: var(--navy); color: #c8d4ea; font-size: .84rem; }
 .info-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; padding-block: 8px; }
