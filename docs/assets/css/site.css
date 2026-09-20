@@ -1,6 +1,7 @@
 /* Magitronic — estilos do site
    Paleta derivada do azul do logo (#002DB2). Um tema só (claro), pintado explicitamente. */
 :root {
+  color-scheme: only light;   /* site claro: evita o modo escuro automático do Chrome no Android */
   --blue: #002db2;
   --blue-700: #00228a;
   --blue-50: #eef2fd;

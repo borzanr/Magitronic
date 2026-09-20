@@ -403,8 +403,11 @@ class Site:
         preload = ""
         if page.get("preload"):
             preload = f'<link rel="preload" as="image" href="/assets/img/{page["preload"]}.webp" fetchpriority="high">'
+        # versões A e B são claras, C é escura: declarar evita o modo escuro automático do Chrome
+        esquema = "dark" if self.theme == "c" else "light"
         head = "\n".join(filter(None, [
             f'<title>{esc(page["title"])}</title>',
+            f'<meta name="color-scheme" content="{esquema}">',
             f'<meta name="description" content="{esc(page["description"])}">',
             f'<meta name="robots" content="{robots}">',
             f'<link rel="canonical" href="{canonical}">' if canonical else "",

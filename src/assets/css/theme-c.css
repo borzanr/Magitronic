@@ -2,6 +2,8 @@
    Interface escura, inspirada em painéis de diagnóstico: azul-carbono, ciano elétrico,
    rótulos em fonte monoespaçada e linhas finas. Carregada depois de site.css. */
 
+:root:has(body.theme-c) { color-scheme: dark; }   /* esta versão já é escura de propósito */
+
 body.theme-c {
   --blue: #35c8f0;            /* ciano elétrico: destaques e links */
   --blue-700: #7ee0ff;
