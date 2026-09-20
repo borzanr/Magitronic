@@ -421,7 +421,7 @@ class Site:
         if self.prefix:
             # links e ações internos passam a apontar para a subpasta (os assets continuam na raiz)
             out = re.sub(r'(href|src|action)="/(?!/|assets/)', lambda m: f'{m.group(1)}="{self.prefix}/', out)
-        return out
+        return out.replace('href="@@', 'href="')
 
     def body_attrs(self) -> str:
         attrs = f' data-base="{self.prefix}"' if self.prefix else ""
@@ -441,8 +441,9 @@ class Site:
 
     def demo_bar(self) -> str:
         """Barra de protótipo com o seletor entre as versões visuais."""
+        # "@@" protege estes links da reescrita de prefixo feita em render()
         links = "".join(
-            f'<a href="{path}" class="ver-{t}{" atual" if t == self.theme else ""}">{esc(label)}</a>'
+            f'<a href="@@{path}" class="ver-{t}{" atual" if t == self.theme else ""}">{esc(label)}</a>'
             for t, (label, path) in self.VERSOES.items())
         return (self.templates["demo-bar"]
                 .replace("[[switch]]", links)

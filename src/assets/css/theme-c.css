@@ -65,6 +65,13 @@ body.theme-c .chips li { background: var(--surface); border-color: var(--line); 
 body.theme-c .dir-list a { color: var(--ink-2); }
 body.theme-c .dir-list a:hover { background: var(--blue-50); color: var(--blue); }
 
+/* ---------- barra de informações ---------- */
+body.theme-c .info-bar { background: #03060d; border-bottom: 1px solid var(--line); color: var(--ink-2); font-family: var(--mono); font-size: .76rem; }
+body.theme-c .info-list .ico { color: var(--blue); }
+body.theme-c .info-cta strong { color: var(--blue); }
+body.theme-c .info-cta a { border-color: #23405c; }
+body.theme-c .info-cta a:hover { background: rgb(53 200 240 / .12); }
+
 /* ---------- topo ---------- */
 body.theme-c .site-header { background: rgb(5 8 15 / .86); backdrop-filter: blur(10px); border-bottom-color: var(--line); }
 body.theme-c .logo img { filter: brightness(0) invert(1); }
@@ -91,6 +98,7 @@ body.theme-c .hero::before {
 }
 body.theme-c .hero h1 span { color: var(--blue); text-shadow: 0 0 28px rgb(53 200 240 / .45); }
 body.theme-c .hero-art img { filter: drop-shadow(0 24px 60px rgb(53 200 240 / .25)); }
+body.theme-c .hero-media { border: 1px solid var(--line); box-shadow: 0 0 0 1px rgb(53 200 240 / .12), 0 30px 70px rgb(0 0 0 / .6); }
 body.theme-c .ticks li::before { border-color: var(--blue); }
 
 body.theme-c .quote-bar { box-shadow: 0 0 0 1px rgb(53 200 240 / .18), 0 20px 50px rgb(0 0 0 / .6); }

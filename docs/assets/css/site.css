@@ -109,6 +109,24 @@ p { margin: 0; }
 .demo-switch a:hover { background: #fff; }
 .demo-switch a.atual { background: #5c4300; color: #fff4d6; border-color: #5c4300; }
 
+/* ---------- barra de informações (topo) ---------- */
+.info-bar { background: var(--navy); color: #c8d4ea; font-size: .84rem; }
+.info-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 8px; }
+.info-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.info-list li { display: inline-flex; align-items: center; gap: 7px; }
+.info-list .ico { width: 15px; height: 15px; color: var(--blue-100); }
+.info-bar a { color: #fff; text-decoration: none; }
+.info-bar a:hover { text-decoration: underline; }
+.info-cta { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.info-cta strong { color: #fff; font-weight: 650; }
+.info-cta a { border: 1px solid rgb(255 255 255 / .35); border-radius: 999px; padding: 3px 12px; }
+.info-cta a:hover { background: rgb(255 255 255 / .1); text-decoration: none; }
+@media (max-width: 860px) {
+  .info-list .info-addr { display: none; }
+  .info-row { justify-content: center; gap: 4px 16px; }
+  .info-cta strong { display: none; }
+}
+
 /* ---------- cabeçalho ---------- */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
 .header-row { display: flex; align-items: center; gap: 16px; min-height: 72px; }
@@ -198,9 +216,22 @@ p { margin: 0; }
 .hero .lead { font-size: 1.15rem; }
 .hero-art { margin: 0; justify-self: center; }
 .hero-art img { width: min(420px, 100%); height: auto; }
+.hero-media { margin: 0; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.hero-badge {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 16px;
+  background: linear-gradient(180deg, transparent, rgb(6 13 31 / .88));
+  color: #fff; font-size: .92rem; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+}
+.hero-badge strong { font-size: 1.35rem; font-stretch: 112%; font-weight: 750; }
+@media (max-width: 899px) {
+  /* no celular a textura não pode competir com o título */
+  .hero::before { opacity: .2; mask-image: linear-gradient(180deg, transparent 0%, #000 55%); -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 55%); }
+}
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 48px; }
   .hero-art img { width: 100%; max-width: 460px; }
+  .hero-media img { aspect-ratio: 3 / 2; }
 }
 
 /* barra de orçamento rápido sob o topo */

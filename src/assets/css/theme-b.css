@@ -48,6 +48,12 @@ body.theme-b .hero .btn-ghost:hover, body.theme-b .page-hero .btn-ghost:hover, b
 }
 body.theme-b .btn-sm { min-height: 42px; }
 
+/* ---------- barra de informações ---------- */
+body.theme-b .info-bar { background: #04091a; border-bottom: 1px solid #1b2947; }
+body.theme-b .info-list .ico { color: var(--amber); }
+body.theme-b .info-cta a { border-color: var(--amber); color: var(--amber); }
+body.theme-b .info-cta a:hover { background: var(--amber); color: #23180a; }
+
 /* ---------- cabeçalho escuro ---------- */
 body.theme-b .site-header { background: var(--navy); border-bottom: 1px solid #1b2947; }
 body.theme-b .logo img { filter: brightness(0) invert(1); }
@@ -82,7 +88,8 @@ body.theme-b .hero .lead { color: #c3cfe8; font-size: 1.2rem; }
 body.theme-b .hero .eyebrow { color: var(--amber); }
 body.theme-b .hero .ticks li { color: #e8edf9; }
 body.theme-b .hero .ticks li::before { border-color: var(--amber); }
-body.theme-b .hero-art img { filter: drop-shadow(0 30px 60px rgb(0 0 0 / .55)); }
+body.theme-b .hero-art img { filter: drop-shadow(0 20px 40px rgb(6 13 31 / .2)); }
+body.theme-b .hero-media { box-shadow: 0 30px 70px rgb(0 0 0 / .55); border: 1px solid #22314f; }
 body.theme-b .quote-bar { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 body.theme-b .quote-bar-title { color: var(--navy); }
 body.theme-b .hero-card { border: 0; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
