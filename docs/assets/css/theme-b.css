@@ -55,21 +55,11 @@ body.theme-b .info-list .ico { color: var(--amber); }
 body.theme-b .info-cta a { border-color: var(--amber); color: var(--amber); }
 body.theme-b .info-cta a:hover { background: var(--amber); color: #23180a; }
 
-/* ---------- cabeçalho escuro ---------- */
-body.theme-b .site-header { background: var(--navy); border-bottom: 1px solid #1b2947; }
-body.theme-b .logo { color: #fff; }   /* cabeçalho escuro nas duas condições */
-body.theme-b .nav-list > li > a, body.theme-b .sub-toggle, body.theme-b .nav-phone { color: #e8edf9; }
-body.theme-b .menu-toggle { background: transparent; color: #fff; border-color: #2b3a5e; }
-body.theme-b .nav.open { background: var(--navy); border-bottom-color: #1b2947; }
-body.theme-b .nav-list > li > a, body.theme-b .sub-toggle { border-bottom-color: #1b2947; }
-@media (min-width: 1100px) {
-  body.theme-b .nav-list > li > a:hover, body.theme-b .sub-toggle:hover { background: #16233f; color: #fff; }
-  body.theme-b .sub, body.theme-b .sub.open { background: #0d1729; border-color: #22314f; }
-}
-body.theme-b .sub a { color: #c9d4ea; }
-body.theme-b .sub a:hover { color: var(--amber); }
-body.theme-b .sub-title { color: var(--amber); }
-body.theme-b .sub-all a { color: #fff; }
+/* ---------- cabeçalho claro, igual ao da versão A ---------- */
+body.theme-b .logo { color: #002db2; }   /* azul do logotipo */
+body.theme-b .sub-title { color: #8a5a00; }
+body.theme-b .sub a:hover { color: var(--blue); }
+body.theme-b .sub-all a { color: var(--blue); }
 
 /* ---------- carrossel do topo ---------- */
 body.theme-b .hero { background: var(--navy); border-bottom: 4px solid var(--amber); }
