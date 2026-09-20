@@ -85,6 +85,12 @@ class Site:
     def url(self, path: str) -> str:
         return self.base + path
 
+    def public_url(self, path: str) -> str:
+        """Endereço onde a página está de fato publicada. Em homologação é o domínio de
+        demonstração; é o que as prévias de link (WhatsApp, redes) precisam alcançar."""
+        base = self.d["staging_url"] if self.staging else self.base
+        return base + (self.prefix if path != "/" or self.prefix else "") + ("" if path == "/" and not self.prefix else path).replace("//", "/")
+
     def wa(self, msg: str | None = None) -> str:
         return f"https://wa.me/{self.d['whatsapp_number']}?text={quote(msg or self.d['whatsapp_default_msg'])}"
 
@@ -391,7 +397,9 @@ class Site:
                      for s in schemas)
         robots = "noindex, nofollow" if (self.staging or page.get("noindex") or self.prefix) else "index, follow"
         canonical = self.url(path) if path != "/404" else ""
-        og_image = self.url("/assets/img/og-magitronic.jpg")
+        og_base = self.d["staging_url"] if self.staging else self.base
+        og_image = og_base + "/assets/img/og-magitronic.jpg"
+        og_url = og_base + (self.prefix or "") + ("/" if path == "/" else path)
         preload = ""
         if page.get("preload"):
             preload = f'<link rel="preload" as="image" href="/assets/img/{page["preload"]}.webp" fetchpriority="high">'
@@ -405,7 +413,7 @@ class Site:
             f'<meta property="og:site_name" content="Magitronic">',
             f'<meta property="og:title" content="{esc(page["title"])}">',
             f'<meta property="og:description" content="{esc(page["description"])}">',
-            f'<meta property="og:url" content="{canonical or self.url("/")}">',
+            f'<meta property="og:url" content="{og_url}">',
             f'<meta property="og:image" content="{og_image}">',
             f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">',
             f'<meta name="twitter:card" content="summary_large_image">',
