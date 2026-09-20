@@ -543,6 +543,7 @@ COMPONENTS = {
     "img_hero": lambda s, a: s.img(*[x.strip() for x in a.split("|")][:2], eager=True),
     "sitemap_links": lambda s, a: s.sitemap_links(),
     "year": lambda s, a: str(date.today().year),
+    "anos": lambda s, a: str(date.today().year - int(s.d["founded"])),   # anos de casa, sempre atual
     "maps_url": lambda s, a: esc(s.d["maps_url"]),
     "instagram_url": lambda s, a: esc(s.d["instagram"]),
     "email_link": lambda s, a: f'<a href="mailto:{s.d["email"]}">{s.d["email"]}</a>',
