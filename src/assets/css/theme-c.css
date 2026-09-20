@@ -90,7 +90,10 @@ body.theme-c .info-cta a:hover { background: rgb(53 200 240 / .12); }
 
 /* ---------- topo ---------- */
 body.theme-c .site-header { background: rgb(5 8 15 / .86); backdrop-filter: blur(10px); border-bottom-color: var(--line); }
-body.theme-c .logo img { filter: brightness(0) invert(1); }
+@media (prefers-color-scheme: light) {
+  /* no claro é servida a imagem azul e este cabeçalho é escuro: clareia por filtro */
+  body.theme-c .logo img { filter: brightness(0) invert(1); }
+}
 body.theme-c .nav-list > li > a, body.theme-c .sub-toggle, body.theme-c .nav-phone { color: #dbe6f5; }
 body.theme-c .menu-toggle { background: transparent; color: #fff; border-color: var(--line); }
 body.theme-c .nav.open { background: var(--navy); }

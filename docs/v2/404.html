@@ -23,8 +23,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=f1e32455">
-<link rel="stylesheet" href="/assets/css/theme-b.css?v=f1e32455">
+<link rel="stylesheet" href="/assets/css/site.css?v=013cd0bd">
+<link rel="stylesheet" href="/assets/css/theme-b.css?v=013cd0bd">
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -32,7 +32,7 @@ gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_per
 try { if (localStorage.getItem('mg-consent') === 'granted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
 </script>
 
-<script src="/assets/js/site.js?v=f1e32455" defer></script>
+<script src="/assets/js/site.js?v=013cd0bd" defer></script>
 </head>
 <body class="theme-b" data-base="/v2">
 
@@ -63,7 +63,10 @@ try { if (localStorage.getItem('mg-consent') === 'granted') gtag('consent', 'upd
 <header class="site-header">
   <div class="wrap header-row">
     <a class="logo" href="/v2/" aria-label="Magitronic, página inicial">
-      <img src="/assets/img/logo-magitronic.png" width="296" height="62" alt="Magitronic">
+      <picture>
+        <source srcset="/assets/img/logo-magitronic-branco.png" media="(prefers-color-scheme: dark)">
+        <img src="/assets/img/logo-magitronic.png" width="296" height="62" alt="Magitronic">
+      </picture>
     </a>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">

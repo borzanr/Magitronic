@@ -290,8 +290,12 @@ class Site:
         original na versão C, onde a transparência não funciona (o render é claro)."""
         alt = ("Notebook aberto com telas de diagnóstico, engrenagens, escudo e nuvem flutuando ao "
                "redor, e a placa com a marca Magitronic")
-        nome = "notebook-render-fundo" if self.theme == "c" else "notebook-render"
-        return f'<figure class="figure-frame">{self.img(nome, alt)}</figure>'
+        if self.theme == "c":
+            return f'<figure class="figure-frame">{self.img("notebook-render-fundo", alt)}</figure>'
+        # o recorte só funciona sobre fundo claro; no modo escuro entra o render com o fundo original
+        return ('<figure class="figure-frame"><picture>'
+                '<source srcset="/assets/img/notebook-render-fundo.webp" media="(prefers-color-scheme: dark)">'
+                f'{self.img("notebook-render", alt)}</picture></figure>')
 
     def map_block(self, facade: bool = False) -> str:
         """Mapa do Google. Com facade=True o iframe (~1 MB de scripts) só carrega quando a pessoa clica."""

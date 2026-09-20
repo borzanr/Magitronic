@@ -574,7 +574,6 @@ p { margin: 0; }
   .info-bar, .proof-band, .band, .site-footer, .skip { background: #070c17; }
   .cta-box { background: linear-gradient(120deg, #16255a, #0b1222); border: 1px solid var(--line); }
   .site-header { background: var(--surface); }
-  .logo img { filter: brightness(0) invert(1); }   /* logo azul escuro não aparece no cabeçalho escuro */
 
   /* textos e superfícies */
   .prose p, .prose li { color: var(--ink-2); }
@@ -604,5 +603,7 @@ p { margin: 0; }
       var(--surface); }
   .prose th { background: var(--blue-50); color: #fff; }
   .action-bar { background: var(--surface); }
+  /* o render recortado é claro: no escuro entra o que tem fundo próprio, dentro de moldura */
+  .figure-frame { border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
   .stars { color: #ffc247; }
 }
