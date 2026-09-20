@@ -9,13 +9,13 @@
   --navy-800: #13214a;
   --ink: #141d36;
   --ink-2: #4a5572;
-  --ink-3: #6b7592;
+  --ink-3: #636d8a;      /* escurecido: rótulos pequenos passam a 4,5:1 */
   --line: #dfe4ef;
   --ground: #f5f7fb;
   --surface: #ffffff;
   --wa: #0d7a3e;
   --wa-700: #0a6231;
-  --star: #e89b00;
+  --star: #9e6500;       /* estrelas legíveis sobre fundo claro */
   --ok: #0d7a3e;
   --err: #b42318;
 

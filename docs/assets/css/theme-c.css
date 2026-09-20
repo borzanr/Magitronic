@@ -15,8 +15,8 @@ body.theme-c {
   --line: #1c2942;
   --ground: #05080f;
   --surface: #0b1220;
-  --wa: #14a05a;
-  --wa-700: #0f8a4c;
+  --wa: #0d8748;      /* verde com contraste 4,5:1 para o texto branco */
+  --wa-700: #0a6f3a;
   --star: #ffc247;
   --radius: 4px;
   --radius-lg: 8px;
@@ -115,6 +115,10 @@ body.theme-c .field input:focus, body.theme-c .field select:focus, body.theme-c 
   border-color: var(--blue); outline-color: rgb(53 200 240 / .25);
 }
 body.theme-c .check label, body.theme-c .hint, body.theme-c .form-note { color: var(--ink-3); }
+
+/* endereço, horário e contatos nos cartões: herdavam a cor de título (quase preta) */
+body.theme-c .contact-list .v, body.theme-c .contact-list address { color: #fff; }
+body.theme-c .contact-list .k { color: var(--blue); }
 body.theme-c .lead-form legend { color: #fff; }
 
 /* ---------- botões ---------- */
