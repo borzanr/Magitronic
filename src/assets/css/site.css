@@ -139,7 +139,7 @@ p { margin: 0; }
 /* ---------- cabeçalho ---------- */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
 .header-row { display: flex; align-items: center; gap: 16px; min-height: 72px; }
-.logo { display: inline-flex; color: var(--navy); }
+.logo { display: inline-flex; color: var(--blue); }   /* azul da marca */
 .logo svg { width: 164px; height: auto; display: block; }
 .logo img { width: 164px; height: auto; }
 .menu-toggle {
@@ -300,8 +300,10 @@ p { margin: 0; }
 .proof dd { margin: 0; font-weight: 750; font-stretch: 112%; font-size: clamp(1.4rem, 3vw, 1.9rem); color: #fff; }
 @media (min-width: 700px) { .proof { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
-/* imagem com fundo recortado: sem moldura, ela se apoia no próprio fundo da página */
-.figure-frame { margin: 0; justify-self: center; max-width: 480px; }
+.figure-frame {
+  margin: 0; justify-self: center; max-width: 480px;
+  border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow);
+}
 .figure-frame img { width: 100%; height: auto; display: block; }
 .hero-photo { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
@@ -606,7 +608,5 @@ p { margin: 0; }
       var(--surface); }
   .prose th { background: var(--blue-50); color: #fff; }
   .action-bar { background: var(--surface); }
-  /* o render recortado é claro: no escuro entra o que tem fundo próprio, dentro de moldura */
-  .figure-frame { border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
   .stars { color: #ffc247; }
 }
