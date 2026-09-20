@@ -32,11 +32,11 @@ PHOTOS = {
     "assistencia-dell": ("assistencia-dell-notebook-orcamento.png", 900),
     "tecnico-solda": ("banner-quem-somos.jpg", 1400),
     "circuito": ("banner-principal.jpg", 1600),
-    "notebook-render": ("notebook-render.webp", 900),   # render realista com a marca, usado em "Quem somos"
+    "notebook-render-fundo": ("notebook-render.webp", 900),   # render com o fundo cinza, usado no tema escuro
 }
 
-# nenhuma ilustração de fundo transparente em uso no momento
-ILLUSTRATIONS: dict[str, tuple[str, int]] = {}
+# imagens com transparência: o alfa é comprimido à parte (alpha_quality), senão o arquivo dobra de tamanho
+ILLUSTRATIONS = {"notebook-render": ("notebook-render-alpha.png", 760)}
 
 
 def save_webp(im: Image.Image, name: str, max_w: int, quality: int = 74) -> None:
@@ -112,7 +112,7 @@ def main() -> None:
         im = Image.open(SRC / src).convert("RGBA")
         if im.width > max_w:
             im = im.resize((max_w, round(im.height * max_w / im.width)), Image.LANCZOS)
-        im.save(OUT / f"{name}.webp", "WEBP", quality=82, method=6)  # mantém a transparência
+        im.save(OUT / f"{name}.webp", "WEBP", quality=76, alpha_quality=85, method=6)  # mantém a transparência
         print(f"{name}.webp {im.width}x{im.height} {(OUT / (name + '.webp')).stat().st_size // 1024} KB")
         manifest[name] = list(im.size)
     # dimensões usadas pelo build.py para width/height das <img> (evita salto de layout)

@@ -175,6 +175,12 @@ body.theme-c .map-load {
 body.theme-c .map-load strong { color: #fff; }
 body.theme-c .map-pin { background: var(--blue); box-shadow: inset 0 0 0 8px var(--blue), inset 0 0 0 14px #05080f; }
 
+/* no tema escuro entra o render com o fundo original, dentro de uma moldura */
+body.theme-c .figure-frame {
+  border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow);
+  max-width: 460px;
+}
+
 /* ---------- rodapé e barra do celular ---------- */
 body.theme-c .site-footer { background: #04070d; border-top: 1px solid var(--line); color: var(--ink-2); }
 body.theme-c .footer-title { color: var(--blue); }

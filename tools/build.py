@@ -279,6 +279,14 @@ class Site:
         return self.form_wrap(inner, "full-form", "Olá! Quero um orçamento.", "Pedido de orçamento (site)",
                               "auto", "Enviar pedido de orçamento")
 
+    def render_quem_somos(self) -> str:
+        """Imagem do bloco "Quem somos": recortada nas versões claras, com o fundo
+        original na versão C, onde a transparência não funciona (o render é claro)."""
+        alt = ("Notebook aberto com telas de diagnóstico, engrenagens, escudo e nuvem flutuando ao "
+               "redor, e a placa com a marca Magitronic")
+        nome = "notebook-render-fundo" if self.theme == "c" else "notebook-render"
+        return f'<figure class="figure-frame">{self.img(nome, alt)}</figure>'
+
     def map_block(self, facade: bool = False) -> str:
         """Mapa do Google. Com facade=True o iframe (~1 MB de scripts) só carrega quando a pessoa clica."""
         a = self.d["address"]
@@ -529,6 +537,7 @@ COMPONENTS = {
     "part_form": lambda s, a: s.part_form(a),
     "full_form": lambda s, a: s.full_form(),
     "map": lambda s, a: s.map_block(facade=(a == "facade")),
+    "img_quem_somos": lambda s, a: s.render_quem_somos(),
     "blog_list": lambda s, a: s.blog_list(int(a) if a else 0),
     "img": lambda s, a: s.img(*[x.strip() for x in a.split("|")][:2]),
     "img_hero": lambda s, a: s.img(*[x.strip() for x in a.split("|")][:2], eager=True),

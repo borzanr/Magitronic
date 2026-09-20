@@ -51,8 +51,12 @@
     1600,
     2266
   ],
-  "notebook-render": [
+  "notebook-render-fundo": [
     900,
     973
+  ],
+  "notebook-render": [
+    760,
+    755
   ]
 }
